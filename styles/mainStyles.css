@@ -18,17 +18,17 @@
 
 @font-face {
     font-family: mainFont;
-    src: url("fonts/CrimsonText-Regular.ttf");
+    src: url("../fonts/CrimsonText-Regular.ttf");
 }
 
 @font-face {
     font-family: headerFont;
-    src: url("fonts/MarcellusSC-Regular.ttf");
+    src: url("../fonts/MarcellusSC-Regular.ttf");
 }
 
 @font-face {
     font-family: navBarFont;
-    src: url("fonts/CrimsonText-Bold.ttf");
+    src: url("../fonts/CrimsonText-Bold.ttf");
 }
 
 
