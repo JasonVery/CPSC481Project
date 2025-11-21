@@ -186,10 +186,10 @@ body {
         transform: scale(0.65);
     }
 
-    @media (max-width: 1600px) {
+    /* @media (max-width: 1600px) {
         .kioskBorder {
             transform: scale(0.9);
         }
-    }
+    } */
 
 }
