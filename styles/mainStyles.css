@@ -175,3 +175,21 @@ body {
     height: auto;
     cursor: pointer;
 }
+
+
+/* ==========================================================================
+                                MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 2400px) {
+    .kioskBorder {
+        transform: scale(0.65);
+    }
+
+    @media (max-width: 1600px) {
+        .kioskBorder {
+            transform: scale(0.9);
+        }
+    }
+
+}
