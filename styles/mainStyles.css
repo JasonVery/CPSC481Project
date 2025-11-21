@@ -56,7 +56,7 @@ body {
 .kioskWrapper {
     position: relative;
     width: 600px;
-    height: 800px;
+    height: 840px;
     background-color: #FFFAFA;
 
 }
@@ -98,6 +98,12 @@ body {
     height: auto;
 }
 
+/* We can stack the text for request assistance here if we want  */
+/* .navLabel{
+    width: 50px;
+    height: auto;
+} */
+
 
 /* ==========================================================================
                                 MAIN PAGE STYLES
@@ -133,24 +139,8 @@ body {
     border: 2px solid #D3D3D3;
 }
 
-.searchWrapper {
-    width: 450px;
-    height: 40px;
-    background-color: #D3D3D3;
-    position: relative;
-    border-radius: 25px;
-    margin-top: 50px;
 
-}
-
-#searchIcon {
-    position: relative;
-    width: 30px;
-    height: auto;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
+/* Book recomendation stuff */
 .bookGenresCont {
     margin-top: 40px;
     width: 100%;
