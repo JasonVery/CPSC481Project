@@ -4,19 +4,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/eyeCatcherStyles.css">
-    <title>Eye Catcher</title>
-    <script src="scripts/routesForEyeCatcher.js"></script>
+    <link rel="styleSheet" href="styles/styles.css">
+    <script src="scripts/main.js"></script>
+    <title>Library Kiosk</title>
 </head>
 
 <body>
-    <div class="kioskWrapper">
-        <div class="mainCont">
-            <div class="helpBtn"></div>
-            <div class="fullScreenBtn"></div>
+    <div class="kioskBorder">
+        <div class="kioskWrapper">
 
+            <!-- ==========================================================================
+                       EYE CATCHER PAGE
+   ========================================================================== -->
+
+            <div id="eyeCatcherPage" class="page active">
+                <div class="eyeCatcherHelpBtn"></div>
+                <div class="eyeCatcherStartBtn"></div>
+            </div>
+
+            <!-- ==========================================================================
+                       NAV BAR ELEMENTS & MAIN CONTAINER
+   ========================================================================== -->
+            <div class="navBar">
+                <div class="navItem" id="backBtn">
+                    <img src="images/icons/Left.svg" class="navIcon">
+                    <span class="navLabel">Go Back</span>
+                </div>
+
+                <div class="navItem" id="homeBtn">
+                    <img src="images/icons/Home.svg" class="navIcon">
+                    <span class="navLabel">Return Home</span>
+                </div>
+
+                <div class="navItem" id="helpbtn">
+                    <img src="images/icons/Help.svg" class="navIcon">
+                    <span class="navLabel">Request Assistance</span>
+                </div>
+
+                <div class="navItem" id="loginBtn">
+                    <img src="images/icons/User.svg" class="navIcon">
+                    <span class="navLabel">Login</span>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================================
+                       MAIN  PAGE
+   ========================================================================== -->
+            <div class="mainCont">
+
+                <div id="mainPage" class="page active">
+                    <div class="searchBarCont">
+                        <img class="searchIcon" src="images/icons/Search.svg">
+                        <div class="searchBarText">Tap to Search ...</div>
+                    </div>
+
+
+                    <!-- Different Book Genres -->
+                    <div class="bookGenresCont">
+                        <div class="genreAndTitleCont">
+                            <h1>New</h1>
+                            <div class="bookGenre">
+                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
+                                <img class="bookMainPage" src="images/books/splendidSuns.svg">
+                                <img class="bookMainPage" src="images/books/achilles.svg">
+                                <img class="bookMainPage" src="images/books/midnightLib.svg">
+                                <img class="bookMainPage" src="images/books/headsYouWith.svg">
+                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            </div>
+                        </div>
+
+                        <div class="genreAndTitleCont">
+                            <h1>Classics</h1>
+                            <div class="bookGenre">
+                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
+                                <img class="bookMainPage" src="images/books/tender.svg">
+                                <img class="bookMainPage" src="images/books/rye.svg">
+                                <img class="bookMainPage" src="images/books/blossom.svg">
+                                <img class="bookMainPage" src="images/books/paradise.svg">
+                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            </div>
+                        </div>
+
+                        <div class="genreAndTitleCont">
+                            <h1>Mystery</h1>
+                            <div class="bookGenre">
+                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
+                                <img class="bookMainPage" src="images/books/sheGone.svg">
+                                <img class="bookMainPage" src="images/books/patient.svg">
+                                <img class="bookMainPage" src="images/books/longHome.svg">
+                                <img class="bookMainPage" src="images/books/herrings.svg">
+                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- ==========================================================================
+                       SEARCH PAGE
+   ========================================================================== -->
+
+                <div id="searchPage" class="page">
+                    <div class="searchBarCont">
+                        <img class="searchIcon" src="images/icons/Search.svg">
+                        <div class="searchBarText">A Thousand |</div>
+                    </div>
+
+                    <!-- Fake Data that will appear for search screen -->
+                    <div class="searchResults">
+                        <div class="bookResults">
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchMiles.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Miles</div>
+                                    <div class="bookAuthor">Author: Bridget Morrisey</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span class="availStatus">Available</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchPieces.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Pieces Of You</div>
+                                    <div class="bookAuthor">Author: Claudia Gray </div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span class="availStatus">Available</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchSuns.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Splendid Suns</div>
+                                    <div class="bookAuthor">Author: Khaled Hosseini</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span class="availStatus">Available</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Tomorrows</div>
+                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Tomorrows</div>
+                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Tomorrows</div>
+                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResult">
+                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <div class="bookDetails">
+                                    <div class="bookTitle">A Thousand Tomorrows</div>
+                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="availWrapper">
+                                        <span class="availLabel">Availability: </span>
+                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
+                       SEARCH PAGE
+   ========================================================================== -->
+                <div id="resultsPage" class="page hidden">
+
+                    <div class="searchBarCont">
+                        <img class="searchIcon" src="images/icons/Search.svg">
+                        <div class="searchBarText">A Thousand |</div>
+                    </div>
+
+                    <div class="topResultsInfo">
+                        <div class="resultsText">Showing 8 Results</div>
+                        <div class="filterButtonWrapper">
+                            <div class="filterButton">Filter</div>
+                        </div>
+                    </div>
+
+                    <div class="searchResultsResult">
+                        <div class="bookResultsResult">
+                            <div class="specificResultResult">
+                                <img class="bookCoverArtResult" src="images/books/searchMiles.svg">
+                                <div class="bookDetailsResult">
+                                    <div class="bookTitleResult">A Thousand Miles</div>
+                                    <div class="bookAuthorResult">Author: Bridget Morrisey</div>
+                                    <div class="availWrapperResult">
+                                        <span class="availLabelResult">Availability: </span>
+                                        <span class="availStatusResult">Available</span>
+                                    </div>
+                                    <div class="genreWrapperResult">
+                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreTextResult">Contemporary, Fiction, Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="specificResultResult">
+                                <img class="bookCoverArtResult" src="images/books/searchPieces.svg">
+                                <div class="bookDetailsResult">
+                                    <div class="bookTitleResult">A Thousand Pieces Of You</div>
+                                    <div class="bookAuthorResult">Author: Claudia Gray</div>
+                                    <div class="availWrapperResult">
+                                        <span class="availLabelResult">Availability: </span>
+                                        <span class="availStatusResult">Available</span>
+                                    </div>
+                                    <div class="genreWrapperResult">
+                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreTextResult">Contemporary, Fiction, Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="specificResultResult">
+                                <img class="bookCoverArtResult" src="images/books/searchSuns.svg">
+                                <div class="bookDetailsResult">
+                                    <div class="bookTitleResult">A Thousand Splendid Suns </div>
+                                    <div class="bookAuthorResult">Author: Khaled Hoseini</div>
+                                    <div class="availWrapperResult">
+                                        <span class="availLabelResult">Availability: </span>
+                                        <span class="availStatusResult">Available</span>
+                                    </div>
+                                    <div class="genreWrapperResult">
+                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreTextResult">Contemporary, Fiction, Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="specificResultResult">
+                                <img class="bookCoverArtResult" src="images/books/searchTomorrow.svg">
+                                <div class="bookDetailsResult">
+                                    <div class="bookTitleResult">A Thousand Tomorrows</div>
+                                    <div class="bookAuthorResult">Author: Karen Kingsbury</div>
+                                    <div class="availWrapperResult">
+                                        <span class="availLabelResult">Availability: </span>
+                                        <span class="availStatusResult">Unavailable</span>
+                                    </div>
+                                    <div class="genreWrapperResult">
+                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreTextResult">Contemporary, Fiction, Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
         </div>
+        <!-- Keyboard for search page -->
+        <!-- Needs to go here so we can apply the sticky effect without wrecking other styles -->
+        <div id="keyboardContainer">
+            <img src="images/newKeyboard.svg">
+        </div>
+
     </div>
+
 </body>
 
 </html>

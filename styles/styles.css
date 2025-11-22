@@ -1,0 +1,450 @@
+/* ==========================================================================
+                                GLOBAL STYLES
+   ========================================================================== */
+
+/* Main colour scheme */
+/* background: linear-gradient(90deg, rgba(0, 106, 132, 0.50) 37.98%, rgba(0, 161, 182, 0.50) 74.52%), #007793; */
+
+/* Text colour: D9D9D9 */
+
+/* Dark Gray Colour: D3D3D3 */
+
+/* Background Colour: FFFAFA */
+
+/* Fonts */
+
+@font-face {
+    font-family: mainFont;
+    src: url("../fonts/CrimsonText-Regular.ttf");
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url("../fonts/MarcellusSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: navBarFont;
+    src: url("../fonts/CrimsonText-Bold.ttf");
+}
+
+:root {
+    --kiosk-gradient: linear-gradient(90deg,
+            var(--grad-dark) 38%,
+            var(--grad-light) 75%), var(--grad-base);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    font-family: mainFont;
+}
+
+
+/* Styles for the global sandbox */
+.kioskBorder {
+    background: linear-gradient(90deg,
+            #006A84 38%,
+            #00A1B6 75%,
+            #007793 100%);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.kioskWrapper {
+    width: 430px;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Styles for navbar and buttons */
+.navBar {
+    width: 430px;
+    height: 90px;
+    color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(0, 106, 132, 0.50) 37.98%, rgba(0, 161, 182, 0.50) 74.52%), #007793;
+    font-family: navBarFont;
+    z-index: 99999;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 67px;
+    gap: 4px;
+    margin-top: 20px;
+    padding: 8px;
+}
+
+.navIcon {
+    width: 38px;
+    height: 38px;
+    aspect-ratio: 1/1;
+}
+
+.navLabel {
+    height: 40px;
+    align-self: stretch;
+    color: #D9D9D9;
+    text-align: center;
+    font-family: navBarFont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 10px;
+}
+
+.navItem.hidden {
+    display: none;
+}
+
+
+/* Scroll Bar Styles */
+
+.mainCont::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.mainCont::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+
+.mainCont::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgba(0, 106, 132, 0.50) 37.98%, rgba(0, 161, 182, 0.50) 74.52%), #007793;
+    border-radius: 20px;
+    border: 2px solid #D3D3D3;
+}
+
+
+
+
+/* ==========================================================================
+                        EYE CATCHER STYLES
+   ========================================================================== */
+
+#eyeCatcherPage.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/eyeCatcher.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#eyeCatcherPage {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.eyeCatcherHelpBtn {
+    cursor: pointer;
+    z-index: 10;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 21px;
+    left: 42px
+}
+
+
+.eyeCatcherStartBtn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* ==========================================================================
+                        MAIN CONTAINER STYLES
+   ========================================================================== */
+.mainCont {
+    width: 100%;
+    height: calc(650px - 90px);
+    overflow-y: auto;
+    background: #FFFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+                        MAIN PAGE STYLES & SEARCH BAR
+   ========================================================================== */
+
+
+#mainPage {
+    display: none;
+}
+
+#mainPage.active {
+    display: block;
+}
+
+
+.searchBarCont {
+    width: 334px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #D3D3D3;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    cursor: pointer;
+    margin-left: 42.75px;
+}
+
+.searchIcon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    margin-left: 10px;
+}
+
+.searchBarText {
+    margin-left: 15px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookGenresCont {
+    margin-top: 20px;
+}
+
+.genreAndTitleCont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.genreAndTitleCont h1 {
+    color: #000;
+    font-family: headerFont;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.bookGenre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 30px;
+}
+
+.leftRightIcons {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.bookMainPage {
+    width: 77px;
+    height: 116px;
+    flex-shrink: 0;
+    aspect-ratio: 77/116;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+                    SEARCH PAGE STYLES
+   ========================================================================== */
+#searchPage {
+    display: none;
+}
+
+#searchPage.active {
+    display: block;
+    width: 100%;
+}
+
+.searchResults {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.bookResults {
+    margin-left: 53.75px;
+    margin-top: 22px;
+}
+
+.specificResult {
+    display: flex;
+    padding-bottom: 17px;
+    gap: 15px;
+}
+
+.bookCoverArt {
+    width: 45px;
+    height: 68px;
+    flex-shrink: 0;
+    aspect-ratio: 45/68;
+}
+
+.bookDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bookTitle {
+    /* width: 182px; */
+    height: 19px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: headerFont;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookAuthor {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.availWrapper {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.availStatus {
+    color: #008915;
+}
+
+#keyboardContainer {
+    position: absolute;
+    bottom: 110px;
+    z-index: 99999999;
+    width: 430px;
+    height: 240px;
+    display: none;
+    cursor: pointer;
+}
+
+#keyboardContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================================
+                    RESULTS PAGE STYLES
+   ========================================================================== */
+
+#resultsPage {
+    display: none;
+}
+
+#resultsPage.active {
+    display: block;
+    width: 100%;
+}
+
+.topResultsInfo {
+    display: flex;
+    margin-top: 26px;
+}
+
+.resultsText {
+    width: 284px;
+    height: 37px;
+    flex-shrink: 0;
+    margin-left: 30px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.filterButtonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid var(--kiosk-gradient, #007793);
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    color: var(--kiosk-gradient, #007793);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookResultsResult {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 29px;
+    gap: 29px;
+}
+
+.specificResultResult {
+    display: flex;
+    gap: 59px;
+    height: 120px;
+    flex-shrink: 0;
+    background: #EEEAEA;
+}
+
+.bookCoverArtResult {
+    margin-left: 29px;
+    width: 80px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.bookDetailsResult {
+    margin-top: 16px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
