@@ -352,13 +352,14 @@ body {
     color: #008915;
 }
 
-.availStatusUnavail{
+.availStatusUnavail {
     color: red;
 }
 
+/* Keyboard styles */
 #keyboardContainer {
     position: absolute;
-    bottom: 110px;
+    bottom: -20px;
     z-index: 99999999;
     width: 430px;
     height: 240px;
