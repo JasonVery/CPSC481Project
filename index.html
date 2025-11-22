@@ -36,7 +36,7 @@
                     <span class="navLabel">Return Home</span>
                 </div>
 
-                <div class="navItem" id="helpbtn">
+                <div class="navItem" id="helpBtn">
                     <img src="images/icons/Help.svg" class="navIcon">
                     <span class="navLabel">Request Assistance</span>
                 </div>
@@ -158,7 +158,7 @@
                                     <div class="bookAuthor">Author: Karen Kingsbury</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
-                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                        <span id="notAvail" class="availStatusUnavail">Unavailable</span>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                     <div class="bookAuthor">Author: Karen Kingsbury</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
-                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                        <span id="notAvail" class="availStatusUnavail" >Unavailable</span>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                     <div class="bookAuthor">Author: Karen Kingsbury</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
-                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                        <span id="notAvail" class="availStatusUnavail" >Unavailable</span>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                                     <div class="bookAuthor">Author: Karen Kingsbury</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
-                                        <span id="notAvail" class="availStatus">Unavailable</span>
+                                        <span id="notAvail" class="availStatusUnavail">Unavailable</span>
                                     </div>
                                 </div>
                             </div>
@@ -203,8 +203,9 @@
                     </div>
                 </div>
 
+
                 <!-- ==========================================================================
-                       SEARCH PAGE
+                       RESULTS PAGE
    ========================================================================== -->
                 <div id="resultsPage" class="page hidden">
 
@@ -225,14 +226,14 @@
                             <div class="specificResultResult">
                                 <img class="bookCoverArtResult" src="images/books/searchMiles.svg">
                                 <div class="bookDetailsResult">
-                                    <div class="bookTitleResult">A Thousand Miles</div>
-                                    <div class="bookAuthorResult">Author: Bridget Morrisey</div>
+                                    <div class="bookTitleResult"> <span id="boldFontForResults">Title: </span>A Thousand Miles</div>
+                                    <div class="bookAuthorResult"><span id="boldFontForResults">Author: </span>Bridget Morrisey</div>
                                     <div class="availWrapperResult">
-                                        <span class="availLabelResult">Availability: </span>
-                                        <span class="availStatusResult">Available</span>
+                                        <span class="availLabelResult" id="boldFontForResults">Availability: </span>
+                                        <span class="availStatusResult" id="availStatusResult">Available</span>
                                     </div>
                                     <div class="genreWrapperResult">
-                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreLabelResult" id="boldFontForResults">Genre: </span>
                                         <span class="genreTextResult">Contemporary, Fiction, Romance</span>
                                     </div>
                                 </div>
@@ -241,31 +242,31 @@
                             <div class="specificResultResult">
                                 <img class="bookCoverArtResult" src="images/books/searchPieces.svg">
                                 <div class="bookDetailsResult">
-                                    <div class="bookTitleResult">A Thousand Pieces Of You</div>
-                                    <div class="bookAuthorResult">Author: Claudia Gray</div>
+                                    <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand Pieces Of You</div>
+                                    <div class="bookAuthorResult"><span id="boldFontForResults">Author: </span>Claudia Gray</div>
                                     <div class="availWrapperResult">
-                                        <span class="availLabelResult">Availability: </span>
-                                        <span class="availStatusResult">Available</span>
+                                        <span class="availLabelResult" id="boldFontForResults">Availability: </span>
+                                        <span class="availStatusResult"id="availStatusResult">Available</span>
                                     </div>
                                     <div class="genreWrapperResult">
-                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreLabelResult" id="boldFontForResults">Genre: </span>
                                         <span class="genreTextResult">Contemporary, Fiction, Romance</span>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <div class="specificResultResult">
+                            <div class="specificResultResult" id="demoBook1">
                                 <img class="bookCoverArtResult" src="images/books/searchSuns.svg">
                                 <div class="bookDetailsResult">
-                                    <div class="bookTitleResult">A Thousand Splendid Suns </div>
-                                    <div class="bookAuthorResult">Author: Khaled Hoseini</div>
+                                    <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand Splendid Suns </div>
+                                    <div class="bookAuthorResult"><span id="boldFontForResults">Author: </span>Khaled Hoseini</div>
                                     <div class="availWrapperResult">
-                                        <span class="availLabelResult">Availability: </span>
-                                        <span class="availStatusResult">Available</span>
+                                        <span class="availLabelResult" id="boldFontForResults">Availability: </span>
+                                        <span class="availStatusResult" id="availStatusResult">Available</span>
                                     </div>
                                     <div class="genreWrapperResult">
-                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreLabelResult" id="boldFontForResults">Genre: </span>
                                         <span class="genreTextResult">Contemporary, Fiction, Romance</span>
                                     </div>
                                 </div>
@@ -276,14 +277,14 @@
                             <div class="specificResultResult">
                                 <img class="bookCoverArtResult" src="images/books/searchTomorrow.svg">
                                 <div class="bookDetailsResult">
-                                    <div class="bookTitleResult">A Thousand Tomorrows</div>
-                                    <div class="bookAuthorResult">Author: Karen Kingsbury</div>
+                                    <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand Tomorrows</div>
+                                    <div class="bookAuthorResult"><span id="boldFontForResults">Author: </span>Karen Kingsbury</div>
                                     <div class="availWrapperResult">
-                                        <span class="availLabelResult">Availability: </span>
-                                        <span class="availStatusResult">Unavailable</span>
+                                        <span class="availLabelResult" id="boldFontForResults">Availability: </span>
+                                        <span class="availStatusResult" id="availStatusResultUnavail">Unavailable</span>
                                     </div>
                                     <div class="genreWrapperResult">
-                                        <span class="genreLabelResult">Genre: </span>
+                                        <span class="genreLabelResult" id="boldFontForResults">Genre: </span>
                                         <span class="genreTextResult">Contemporary, Fiction, Romance</span>
                                     </div>
                                 </div>
@@ -293,16 +294,79 @@
                 </div>
 
 
+                <!-- ==========================================================================
+                      BOOK DETAILS PAGE
+   ========================================================================== -->
 
+                <div id="bookDetailsPage" class="page">
+                    <div class="searchBarCont">
+                        <img class="searchIcon" src="images/icons/Search.svg">
+                        <div class="searchBarText">Tap to Search ...</div>
+                    </div>
+                    <div class="bookDetailsCont">
+                        <div class="bookInfoCont">
+                            <div class="bookCoverArtImg">
+                                <img src="images/books/splendidSuns.svg">
+                            </div>
+                            <div class="bookDetailsSuns">
+                                <div class="bookTitleText">A Thousand Splendid Suns</div>
+                                <div class="bookAuthorText">Author: Khaled Hosseini</div>
+                                <div class="bookInfoTextCont">
+                                    <div class="bookInfoText">After more than two years on the bestseller lists and
+                                        over
+                                        four
+                                        million copies in print, Khaled Hosseini returns with a beautiful, riveting,
+                                        and
+                                        haunting
+                                        novel of enormous contemporary relevance.
+                                        A Thousand Splendid Suns is a breathtaking story set against the volatile
+                                        even...
+                                        <span id="showMoreText">Show More</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="libraryDetailsCont">
+                            <div class="availAndLocCont">
+                                <div class="availableAt">1 Available At Louise Riley Library</div>
+                                <div class="shelfLocation">View Shelf Location</div>
+                            </div>
+                            <div class="placeOnHoldBtnCont">
+                                <div class="placeOnHoldBtnText">Place On Hold</div>
+                            </div>
+                        </div>
 
+                        <div class="bookGenresContDetails">
+                            <div class="genreAndTitleContDetails">
+                                <h1>Similar Titles</h1>
+                                <div class="bookGenreDetails">
+                                    <img class="leftRightIconsDetails" src="images/icons/leftIcon.svg">
+                                    <div class="bookImagesForSimilar">
+                                        <img class="bookDetailsForDetails" src="images/books/kiteRunnerDetails.svg">
+                                        <img class="bookDetailsForDetails" src="images/books/echoedDetails.svg">
+                                        <img class="bookDetailsForDetails" src="images/books/growDetails.svg">
+                                        <img class="bookDetailsForDetails" src="images/books/theifDetails.svg">
+                                    </div>
+                                    <img class="leftRightIconsDetails" src="images/icons/rightIcon.svg">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+
+
         </div>
-        <!-- Keyboard for search page -->
-        <!-- Needs to go here so we can apply the sticky effect without wrecking other styles -->
-        <div id="keyboardContainer">
-            <img src="images/newKeyboard.svg">
-        </div>
+    </div>
+    <!-- Keyboard for search page -->
+    <!-- Needs to go here so we can apply the sticky effect without wrecking other styles -->
+    <div id="keyboardContainer">
+        <img src="images/newKeyboard.svg">
+    </div>
 
     </div>
 

@@ -352,6 +352,10 @@ body {
     color: #008915;
 }
 
+.availStatusUnavail{
+    color: red;
+}
+
 #keyboardContainer {
     position: absolute;
     bottom: 110px;
@@ -430,6 +434,7 @@ body {
     height: 120px;
     flex-shrink: 0;
     background: #EEEAEA;
+    cursor: pointer;
 }
 
 .bookCoverArtResult {
@@ -446,5 +451,227 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+}
+
+#boldFontForResults {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#availStatusResult {
+    color: #008915;
+
+}
+
+#availStatusResultUnavail {
+    color: red;
+}
+
+
+
+/* ==========================================================================
+                    BOOK DETAILS STYLES
+   ========================================================================== */
+
+#bookDetailsPage {
+    display: none;
+}
+
+#bookDetailsPage.active {
+    display: block;
+    width: 100%;
+}
+
+.bookDetailsCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookInfoCont {
+    display: flex;
+    width: 100%;
+    margin-top: 28px;
+}
+
+.bookCoverArtImg {
+    width: 159px;
+    height: 232px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.bookCoverArtImg img {
+    width: 100%;
+
+}
+
+.bookDetailsSuns {
+    margin-left: 15px;
+}
+
+.bookTitleText {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookAuthorText {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookInfoTextCont {
+    width: 210px;
+    height: 199px;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+}
+
+#showMoreText {
+    color: #1C72D5;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
+
+.libraryDetailsCont {
+    display: flex;
+    margin-top: 24px;
+}
+
+.availAndLocCont {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.availableAt {
+    width: 237px;
+    height: 23px;
+    flex-shrink: 0;
+    color: #17620D;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.shelfLocation {
+    width: 237px;
+    height: 22px;
+    flex-shrink: 0;
+    color: #1C72D5;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.placeOnHoldBtnCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    flex-shrink: 0;
+    fill: rgba(0, 0, 0, 0.00);
+    stroke-width: 3px;
+    stroke: var(--Gradient-Blue, #007793);
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.25));
+    color: var(--Gradient-Blue, #007793);
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bookGenresContDetails {
+    display: flex;
+}
+
+.genreAndTitleContDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.bookGenreDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+}
+
+.genreAndTitleContDetails h1 {
+    width: 138px;
+    height: 22px;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 27px;
+    font-family: headerFont;
+}
+
+.bookImagesForSimilar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookDetailsForDetails {
+    width: 77px;
+    height: 117px;
+    flex-shrink: 0;
+    aspect-ratio: 77/117;
+    cursor: pointer;
+}
+
+.leftRightIconsDetails {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    cursor: pointer;
 
 }

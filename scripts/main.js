@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const eyeCatcherStartBtn = document.querySelector(".eyeCatcherStartBtn");
     const searchBar = document.querySelector(".searchBarCont");
     const keyboard = document.getElementById("keyboardContainer");
+    const demoBook1 = document.getElementById("demoBook1");
+    const filterBtn = document.querySelector(".filterButtonWrapper");
+    const showMore = document.getElementById("showMoreText");
+    const location = document.querySelector(".shelfLocation");
+    const placeOH = document.querySelector(".placeOnHoldBtnCont");
+
     let currentPage = "eye";
 
 
@@ -17,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainPage = document.getElementById("mainPage");
     const searchPage = document.getElementById("searchPage");
     const resultsPage = document.getElementById("resultsPage");
+    const detailsPage = document.getElementById("bookDetailsPage");
+
 
 
     // Navigation buttons
@@ -69,6 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    function loadDetailsPage() {
+        resetPage();
+        detailsPage.classList.add("active");
+        backBtn.classList.remove("hidden");
+        homeBtn.classList.remove("hidden");
+        currentPage = "details";
+
+    }
+
     // Functions for eye catcher page
     if (eyeCatcherHelpBtn) {
         eyeCatcherHelpBtn.addEventListener("click", function () {
@@ -84,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // Button Clicks 
     if (searchBar) {
         searchBar.addEventListener("click", function () {
             console.log("Search Bar has been Pressed");
@@ -98,12 +116,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (helpBtn) {
+        helpBtn.addEventListener("click", function () {
+            console.log("Help Button Has been Pressed");
+        });
+    }
+
+    if (loginBtn) {
+        loginBtn.addEventListener("click", function () {
+            console.log("Login Button Has been Pressed")
+
+        });
+    }
+
+    if (filterBtn) {
+        filterBtn.addEventListener("click", function () {
+            console.log("Filter Button Has Been Pressed");
+        });
+    }
+
+    if (showMore) {
+        showMore.addEventListener("click", function () {
+            console.log("Show More Has been pressed");
+        });
+    }
+
+    if (location) {
+        location.addEventListener("click", function () {
+            console.log("View Location has been pressed");
+        });
+    }
+
+    if (placeOH) {
+        placeOH.addEventListener("click", function () {
+            console.log("Place On Hold has been pressed");
+
+        });
+    }
+
+    if (demoBook1) {
+        demoBook1.addEventListener("click", function () {
+            console.log("Demo Book 1: Splendid Suns has been pressed");
+            loadDetailsPage();
+        });
+    }
+
 
     // This simulates hitting search so we will now load the result page
     keyboard.addEventListener("click", function () {
         console.log("Keyboard has been Pressed, now showing results");
         loadResultsPage();
     });
+
 
     if (backBtn) {
         backBtn.addEventListener("click", function () {
@@ -115,6 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (currentPage === "results") {
                 loadSearchPage();
 
+            } else if (currentPage === "details") {
+                loadResultsPage();
             }
 
         });
