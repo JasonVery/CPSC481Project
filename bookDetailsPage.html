@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details Page</title>
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/searchFunctionStyles.css">
+    <link rel="stylesheet" href="styles/bookDetailsStyles.css">
+    <script src="scripts/routesForNavbar.js" defer></script>
+    <script src="scripts/searchFunction.js" defer></script>
+</head>
+
+<body>
+    <div class="kioskBorder">
+        <div class="kioskWrapper">
+            <div class="navBar">
+
+                <div class="navBtn" id="backButton">
+                    <img src="images/icons/Left.svg" class="navIcon">
+                    <span class="navLabel">Go Back</span>
+                </div>
+
+                <div class="navBtn" id="homeButton">
+                    <img src="images/icons/Home.svg" class="navIcon">
+                    <span class="navLabel">Home</span>
+                </div>
+
+                <div class="navBtn" id="helpBtn">
+                    <img src="images/icons/Help.svg" class="navIcon">
+                    <span class="navLabel">Help</span>
+                </div>
+
+                <div class="navBtn" id="loginBtn">
+                    <img src="images/icons/User.svg" class="navIcon">
+                    <span class="navLabel">Login</span>
+                </div>
+            </div>
+            <div class="mainCont">
+                <div class="searchWrapper">
+                    <img id="searchIcon" src="images/icons/Search.svg">
+                    <!-- Add input to here late -> not using keyboard anymore -->
+                    <div class="searchBar" style="display: block;">Tap to Search ...</div>
+                    <div class="searchBarAfter" style="display: none;">One Thousand |</div>
+                </div>
+
+                <div class="bookInfoCont">
+                    <div class="bookCoverArtImg">
+                        <img src="images/books/splendidSuns.svg">
+                    </div>
+                    <div class="bookDetails">
+                        <div class="bookTitleText">A Thousand Splendid Suns</div>
+                        <div class="bookDetailGap">
+                            <div class="bookAuthorText">Author: Khaled Hosseini</div>
+                            <div class="bookInfoTextCont">
+                                <div class="bookInfoText">After more than two years on the bestseller lists and over
+                                    four
+                                    million copies in print, Khaled Hosseini returns with a beautiful, riveting, and
+                                    haunting
+                                    novel of enormous contemporary relevance.
+                                    A Thousand Splendid Suns is a breathtaking story set against the volatile even... 
+                                    <span id="showMoreText">Show More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="libraryDetailsCont">
+                    <div class="availAndLocCont">
+                        <div class="availableAt">1 Available At Louise Riley Library</div>
+                        <div class="shelfLocation">View Shelf Location</div>
+                    </div>
+                    <div class="placeOnHoldBtnCont">
+                        <div class="placeOnHoldBtnText">Place On Hold</div>
+                    </div>
+                </div>
+
+                <div class="bookGenresCont">
+                    <div class="genreAndTitleCont">
+                        <h1>Similar Titles</h1>
+                        <div class="bookGenre">
+                            <img class="leftRightIcons" src="images/icons/leftIcon.svg">
+                            <img class="book" src="images/books/kiteRunnerDetails.svg">
+                            <img class="book" src="images/books/echoedDetails.svg">
+                            <img class="book" src="images/books/growDetails.svg">
+                            <img class="book" src="images/books/theifDetails.svg">
+                            <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -33,21 +33,12 @@
     margin-top: 5px;
 }
 
-.searchBar {
+.searchBar, .searchBarAfter {
     width: 100%;
     margin-left: 20px;
     margin-top: 3px;
     font-size: 25px;
     font-family: mainfont;
-}
-
-.searchBarAfter {
-    width: 100%;
-    margin-left: 20px;
-    margin-top: 3px;
-    font-size: 25px;
-    font-family: mainfont;
-
 }
 
 .searchResults {
@@ -66,6 +57,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .bookCoverArt {

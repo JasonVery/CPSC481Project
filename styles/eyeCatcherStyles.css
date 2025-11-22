@@ -54,14 +54,8 @@ body {
 }
 
 
-@media (max-width: 2400px) {
-    .kioskWrapper {
-        transform: scale(0.65);
-    }
-}
-
-@media (max-width: 1600px) {
-    .kioskWrapper {
-        transform: scale(0.9);
+@media screen {
+    .kioskWrapper{
+        transform: scale(0.8);
     }
 }

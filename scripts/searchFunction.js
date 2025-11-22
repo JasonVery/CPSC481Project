@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(keyboard){
         keyboard.addEventListener("click", function () {
-            keyboard.style.display = "none";
+            window.location.href = "resultsPage.html"
         });
     }
 

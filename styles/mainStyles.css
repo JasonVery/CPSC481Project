@@ -35,7 +35,7 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: white;
     overflow: hidden;
     margin: 0;
@@ -181,15 +181,10 @@ body {
                                 MEDIA QUERIES
    ========================================================================== */
 
-@media (max-width: 2400px) {
-    .kioskBorder {
-        transform: scale(0.65);
-    }
 
-    @media (max-width: 1600px) {
-        .kioskBorder {
-            transform: scale(0.9);
-        }
-    }
 
+@media screen {
+    .kioskBorder{
+        transform: scale(0.8);
+    }
 }
