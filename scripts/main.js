@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const showMore = document.getElementById("showMoreText");
     const location = document.querySelector(".shelfLocation");
     const placeOH = document.querySelector(".placeOnHoldBtnCont");
+    const exitPopup = document.querySelector(".exitPopup");
+    const cancelPopup = document.querySelector(".cancelPopup");
 
     let currentPage = "eye";
 
@@ -86,6 +88,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    // popup functions
+    function openRequestAssistancePopup() {
+        document.getElementById("requestAssistancePopup").classList.remove("hidden");
+        document.querySelectorAll(".page").forEach(p => p.classList.add("blurred"));
+        document.getElementById("keyboardContainer").classList.add("blurred");
+    }
+
+    function closeRequestAssistancePopup() {
+        document.getElementById("requestAssistancePopup").classList.add("hidden");
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("blurred"));
+        document.getElementById("keyboardContainer").classList.remove("blurred");
+    }
+
+
+
     // Functions for eye catcher page
     if (eyeCatcherHelpBtn) {
         eyeCatcherHelpBtn.addEventListener("click", function () {
@@ -120,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (helpBtn) {
         helpBtn.addEventListener("click", function () {
             console.log("Help Button Has been Pressed");
+            openRequestAssistancePopup();
         });
     }
 
@@ -162,6 +180,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (exitPopup) {
+        exitPopup.addEventListener("click", function () {
+            console.log("Exit popup has been pressed");
+            closeRequestAssistancePopup();
+        })
+    }
+
+    if (cancelPopup) {
+        cancelPopup.addEventListener("click", function () {
+            console.log("Close popup has been pressed");
+            closeRequestAssistancePopup();
+        })
+    }
+
 
     // This simulates hitting search so we will now load the result page
     keyboard.addEventListener("click", function () {
@@ -186,21 +218,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
-
-    function openRequestAssistancePopup() {
-        document.getElementById("requestAssistancePopup").classList.remove("hidden");
-        document.querySelectorAll(".page").forEach(p => p.classList.add("blurred"));
-        document.getElementById("keyboardContainer").classList.add("blurred");
-    }
-
-    function closeRequestAssistancePopup() {
-        document.getElementById("requestAssistancePopup").classList.add("hidden");
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("blurred"));
-        document.getElementById("keyboardContainer").classList.remove("blurred");
-    }
-
-    helpBtn.addEventListener("click", openRequestAssistancePopup);
-    document.querySelector(".exitPopup").addEventListener("click", closeRequestAssistancePopup);
-    document.querySelector(".cancelPopup").addEventListener("click", closeRequestAssistancePopup);
 
 });
