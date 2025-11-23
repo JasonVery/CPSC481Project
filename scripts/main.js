@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Functions for eye catcher page
     if (eyeCatcherHelpBtn) {
         eyeCatcherHelpBtn.addEventListener("click", function () {
+            openRequestAssistancePopup();
             console.log("Eye Catcher Help Btn has been Pressed");
         });
     }
@@ -186,5 +187,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function openRequestAssistancePopup() {
+        document.getElementById("requestAssistancePopup").classList.remove("hidden");
+        document.querySelectorAll(".page").forEach(p => p.classList.add("blurred"));
+        document.getElementById("keyboardContainer").classList.add("blurred");
+    }
+
+    function closeRequestAssistancePopup() {
+        document.getElementById("requestAssistancePopup").classList.add("hidden");
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("blurred"));
+        document.getElementById("keyboardContainer").classList.remove("blurred");
+    }
+
+    helpBtn.addEventListener("click", openRequestAssistancePopup);
+    document.querySelector(".exitPopup").addEventListener("click", closeRequestAssistancePopup);
+    document.querySelector(".cancelPopup").addEventListener("click", closeRequestAssistancePopup);
 
 });
