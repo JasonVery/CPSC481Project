@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const showMore = document.getElementById("showMoreText");
     const location = document.querySelector(".shelfLocation");
     const placeOH = document.querySelector(".placeOnHoldBtnCont");
-    const exitPopup = document.querySelector(".exitPopup");
-    const cancelPopup = document.querySelector(".cancelPopup");
+    const popupCloseBtns = document.querySelectorAll(".popupClose")
 
     let currentPage = "eye";
 
@@ -88,17 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // popup functions
-    function openRequestAssistancePopup() {
-        document.getElementById("requestAssistancePopup").classList.remove("hidden");
-        document.querySelectorAll(".page").forEach(p => p.classList.add("blurred"));
-        document.getElementById("keyboardContainer").classList.add("blurred");
+    // Universal functions to open and close popups
+    function openPopup(popupID) {
+        const popup = document.getElementById(popupID);
+        if (!popup) {
+            return;
+        }
+
+        popup.classList.remove("hidden");
+
+        let pages = document.querySelectorAll(".page");
+        pages.forEach(page => page.classList.add("blurred"));
+        keyboard.classList.add("blurred");
     }
 
-    function closeRequestAssistancePopup() {
-        document.getElementById("requestAssistancePopup").classList.add("hidden");
-        document.querySelectorAll(".page").forEach(p => p.classList.remove("blurred"));
-        document.getElementById("keyboardContainer").classList.remove("blurred");
+    function closePopup(popupID) {
+        const popup = document.getElementById(popupID);
+        if (!popup) {
+            return
+        }
+
+        popup.classList.add("hidden");
+
+        let pages = document.querySelectorAll(".page");
+        pages.forEach(page => page.classList.remove("blurred"));
+        keyboard.classList.remove("blurred");
     }
 
 
@@ -106,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Functions for eye catcher page
     if (eyeCatcherHelpBtn) {
         eyeCatcherHelpBtn.addEventListener("click", function () {
-            openRequestAssistancePopup();
             console.log("Eye Catcher Help Btn has been Pressed");
+            openPopup("requestAssistancePopup");
         });
     }
 
@@ -136,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (helpBtn) {
         helpBtn.addEventListener("click", function () {
-            console.log("Help Button Has been Pressed");
-            openRequestAssistancePopup();
+            console.log("Help Button Has been Pressed here");
+            openPopup("requestAssistancePopup");
         });
     }
 
@@ -163,13 +176,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (location) {
         location.addEventListener("click", function () {
             console.log("View Location has been pressed");
+            openPopup("shelfLocationPopup");
         });
     }
 
     if (placeOH) {
         placeOH.addEventListener("click", function () {
             console.log("Place On Hold has been pressed");
-
+            openPopup("holdSuccessPopup");
         });
     }
 
@@ -180,19 +194,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (exitPopup) {
-        exitPopup.addEventListener("click", function () {
-            console.log("Exit popup has been pressed");
-            closeRequestAssistancePopup();
+    // Universal handeling to close popups
+    popupCloseBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const popup = btn.closest(".popup");
+            if (popup){
+                closePopup(popup.id);
+                console.log("Closing Popup", popup.id);
+            }
         })
-    }
-
-    if (cancelPopup) {
-        cancelPopup.addEventListener("click", function () {
-            console.log("Close popup has been pressed");
-            closeRequestAssistancePopup();
-        })
-    }
+    })
 
 
     // This simulates hitting search so we will now load the result page

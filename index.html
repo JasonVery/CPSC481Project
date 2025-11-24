@@ -13,7 +13,7 @@
     <div class="kioskBorder">
         <div class="kioskWrapper">
 
-    <!-- ==========================================================================
+            <!-- ==========================================================================
                        EYE CATCHER PAGE
    ========================================================================== -->
 
@@ -22,7 +22,7 @@
                 <div class="eyeCatcherStartBtn"></div>
             </div>
 
-    <!-- ==========================================================================
+            <!-- ==========================================================================
                        NAV BAR ELEMENTS & MAIN CONTAINER
    ========================================================================== -->
             <div class="navBar">
@@ -48,7 +48,7 @@
             </div>
 
 
-    <!-- ==========================================================================
+            <!-- ==========================================================================
                        MAIN  PAGE
    ========================================================================== -->
             <div class="mainCont">
@@ -102,7 +102,7 @@
                 </div>
 
 
-    <!-- ==========================================================================
+                <!-- ==========================================================================
                        SEARCH PAGE
    ========================================================================== -->
 
@@ -204,7 +204,7 @@
                 </div>
 
 
-    <!-- ==========================================================================
+                <!-- ==========================================================================
                        RESULTS PAGE
    ========================================================================== -->
                 <div id="resultsPage" class="page hidden">
@@ -302,7 +302,7 @@
                 </div>
 
 
-    <!-- ==========================================================================
+                <!-- ==========================================================================
                       BOOK DETAILS PAGE
    ========================================================================== -->
 
@@ -365,7 +365,7 @@
                 </div>
             </div>
 
-    <!-- ==========================================================================
+            <!-- ==========================================================================
                       POPUPS
    ========================================================================== -->
             <!-- Keyboard for search page -->
@@ -375,17 +375,38 @@
             </div>
 
             <!-- request assistance popup -->
-            <div id="requestAssistancePopup" class="popup hidden">
+            <div id="requestAssistancePopup" class="popup hidden" data-popup="requestAssistancePopup">
                 <div class="popupBox1">
-                    <img class="exitPopup" src="images/icons/exitPopup.svg">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
                     <h1>Request Assistance</h1>
                     <img class="helpPopup" src="images/icons/helpPopup.svg">
                     <h3>A library staff member is on their way to help!</h3>
-                    <button class="cancelPopup">Cancel</button>
+                    <button class="cancelPopup popupClose">Cancel</button>
                 </div>
             </div>
 
-            
+            <!-- shelf location popup -->
+            <div id="shelfLocationPopup" class="popup hidden" data-popup="shelfLocationPopup">
+                <div class="popupBox2">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+                    <h1>Shelf Location: FIC-HOS</h1>
+                    <img class="photoPopup" src="images/mapPopup.svg">
+                    <button class="acceptPopup popupClose">OK</button>
+                </div>
+            </div>
+
+            <!-- successful hold popup -->
+            <div id="holdSuccessPopup" class="popup hidden" data-popup="holdSuccessPopup">
+                <div class="popupBox3">
+                    <h1>Hold Successful</h1>
+                    <h3>Your book has been successfully put on hold!</h3>
+                    <div class="buttonRow">
+                        <button class="browsePopup popupClose">Stay logged in and continue browsing</button>
+                        <button class="browsePopup popupClose">Log out and return to home page</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
