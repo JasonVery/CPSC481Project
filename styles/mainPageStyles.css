@@ -1,0 +1,88 @@
+/* ==========================================================================
+                        MAIN PAGE STYLES & SEARCH BAR
+   ========================================================================== */
+
+
+#mainPage {
+    display: none;
+}
+
+#mainPage.active {
+    display: block;
+}
+
+
+.searchBarCont {
+    width: 334px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #D3D3D3;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    cursor: pointer;
+    margin-left: 42.75px;
+}
+
+.searchIcon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    margin-left: 10px;
+}
+
+.searchBarText {
+    margin-left: 15px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bookGenresCont {
+    margin-top: 20px;
+}
+
+.genreAndTitleCont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.genreAndTitleCont h1 {
+    color: #000;
+    font-family: headerFont;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.bookGenre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 30px;
+}
+
+.leftRightIcons {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.bookMainPage {
+    width: 77px;
+    height: 116px;
+    flex-shrink: 0;
+    aspect-ratio: 77/116;
+    cursor: pointer;
+}

@@ -1,0 +1,239 @@
+/* ==========================================================================
+                   POPUP STYLES
+   ========================================================================== */
+
+
+/* Request Assistance */
+.popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2147483647;
+}
+
+.hidden {
+    display: none;
+}
+
+.blurred {
+    filter: blur(6px);
+    pointer-events: none;
+}
+
+.popupBox1 {
+    width: 359px;
+    height: 233px;
+    background: #FFFBFB;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    padding: 20px 25px 20px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+.exitPopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#requestAssistancePopup h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+.helpPopup {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+#requestAssistancePopup h3 {
+    width: 298px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cancelPopup {
+    width: 71px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+}
+
+
+/* Shelf Location and Place On Hold */
+#placeHoldPopup h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+#placeHoldPopup h3 {
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+.buttonRow {
+    display: flex;
+    gap: 40px;
+}
+
+.acceptPopup {
+    width: 71px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+}
+
+.cancelPopupOH {
+    width: 71px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+}
+
+.popupBox2 {
+    width: 421px;
+    height: 281px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+#shelfLocationPopup h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#shelfLocationPopup h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.photoPopup {
+    margin-top: -10px;
+    width: 407px;
+    height: 181px;
+    flex-shrink: 0;
+    aspect-ratio: 407/181;
+}
+
+.popupBox3 {
+    width: 400px;
+    height: 161px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+#holdSuccessPopup h3 {
+    margin-top: -10px;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#holdSuccessPopup h1 {
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.browsePopup {
+    width: 150px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+    margin-top: -12px;
+    font-size: 15px;
+}
