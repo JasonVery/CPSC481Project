@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const showMore = document.getElementById("showMoreText");
     const location = document.querySelector(".shelfLocation");
     const placeOH = document.querySelector(".placeOnHoldBtnCont");
-    const popupCloseBtns = document.querySelectorAll(".popupClose")
+    const placeOHSuccess = document.getElementById("successPopup");
+    const popupCloseBtns = document.querySelectorAll(".popupClose");
 
     let currentPage = "eye";
 
@@ -183,8 +184,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (placeOH) {
         placeOH.addEventListener("click", function () {
             console.log("Place On Hold has been pressed");
-            openPopup("holdSuccessPopup");
+            openPopup("placeHoldPopup");
         });
+    }
+
+    if (placeOHSuccess) {
+        placeOHSuccess.addEventListener("click", function () {
+            console.log("Place On Hold Success has been presses");
+            closePopup("placeHoldPopup");
+            openPopup("holdSuccessPopup");
+
+        })
     }
 
     if (demoBook1) {
