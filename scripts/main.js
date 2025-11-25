@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Specific one off vars
     const eyeCatcherHelpBtn = document.querySelector(".eyeCatcherHelpBtn");
     const eyeCatcherStartBtn = document.querySelector(".eyeCatcherStartBtn");
-    const searchBar = document.querySelector(".searchBarCont");
+    const searchBars = document.querySelectorAll(".searchBarCont");
     const keyboard = document.getElementById("keyboardContainer");
     const demoBook1 = document.getElementById("demoBook1");
     const filterBtn = document.querySelector(".filterButtonWrapper");
@@ -134,10 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Button Clicks 
-    if (searchBar) {
-        searchBar.addEventListener("click", function () {
-            console.log("Search Bar has been Pressed");
-            loadSearchPage();
+    if (searchBars) {
+        searchBars.forEach(searchBar => {
+            searchBar.addEventListener("click", function () {
+                console.log("Search Bar has been Pressed");
+                loadSearchPage();
+            });
         });
     }
 
@@ -208,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popupCloseBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             const popup = btn.closest(".popup");
-            if (popup){
+            if (popup) {
                 closePopup(popup.id);
                 console.log("Closing Popup", popup.id);
             }
