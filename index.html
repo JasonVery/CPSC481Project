@@ -10,7 +10,9 @@
     <link rel="styleSheet" href="styles/searchPageStyles.css">
     <link rel="styleSheet" href="styles/resultsPageStyles.css">
     <link rel="styleSheet" href="styles/popupStyles.css">
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/bookCarousel.js" defer></script>
+    <script src="scripts/autoLogout.js" defer></script>
     <title>Library Kiosk</title>
 </head>
 
@@ -68,38 +70,44 @@
                     <!-- Different Book Genres -->
                     <div class="bookGenresCont">
                         <div class="genreAndTitleCont">
-                            <h1>New</h1>
-                            <div class="bookGenre">
-                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
-                                <img class="bookMainPage" src="images/books/splendidSuns.svg">
-                                <img class="bookMainPage" src="images/books/achilles.svg">
-                                <img class="bookMainPage" src="images/books/midnightLib.svg">
-                                <img class="bookMainPage" src="images/books/headsYouWith.svg">
-                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            <div class="carousel" data-carousel="new">
+                                <h1>New</h1>
+                                <div class="bookGenre">
+                                    <img class="leftRightIcons left" src="images/icons/leftIcon.svg">
+                                    <img class="bookMainPage" src="images/books/splendidSuns.svg">
+                                    <img class="bookMainPage" src="images/books/achilles.svg">
+                                    <img class="bookMainPage" src="images/books/midnightLib.svg">
+                                    <img class="bookMainPage" src="images/books/headsYouWith.svg">
+                                    <img class="leftRightIcons right" src="images/icons/rightIcon.svg">
+                                </div>
                             </div>
                         </div>
 
                         <div class="genreAndTitleCont">
-                            <h1>Classics</h1>
-                            <div class="bookGenre">
-                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
-                                <img class="bookMainPage" src="images/books/tender.svg">
-                                <img class="bookMainPage" src="images/books/rye.svg">
-                                <img class="bookMainPage" src="images/books/blossom.svg">
-                                <img class="bookMainPage" src="images/books/paradise.svg">
-                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            <div class="carousel" data-carousel="classic">
+                                <h1>Classics</h1>
+                                <div class="bookGenre">
+                                    <img class="leftRightIcons left" src="images/icons/leftIcon.svg">
+                                    <img class="bookMainPage" src="images/books/tender.svg">
+                                    <img class="bookMainPage" src="images/books/rye.svg">
+                                    <img class="bookMainPage" src="images/books/blossom.svg">
+                                    <img class="bookMainPage" src="images/books/paradise.svg">
+                                    <img class="leftRightIcons right" src="images/icons/rightIcon.svg">
+                                </div>
                             </div>
                         </div>
 
                         <div class="genreAndTitleCont">
-                            <h1>Mystery</h1>
-                            <div class="bookGenre">
-                                <img class="leftRightIcons" src="images/icons/leftIcon.svg">
-                                <img class="bookMainPage" src="images/books/sheGone.svg">
-                                <img class="bookMainPage" src="images/books/patient.svg">
-                                <img class="bookMainPage" src="images/books/longHome.svg">
-                                <img class="bookMainPage" src="images/books/herrings.svg">
-                                <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                            <div class="carousel" data-carousel="mystery">
+                                <h1>Mystery</h1>
+                                <div class="bookGenre">
+                                    <img class="leftRightIcons left" src="images/icons/leftIcon.svg">
+                                    <img class="bookMainPage" src="images/books/sheGone.svg">
+                                    <img class="bookMainPage" src="images/books/patient.svg">
+                                    <img class="bookMainPage" src="images/books/longHome.svg">
+                                    <img class="bookMainPage" src="images/books/herrings.svg">
+                                    <img class="leftRightIcons right" src="images/icons/rightIcon.svg">
+                                </div>
                             </div>
                         </div>
 
@@ -352,16 +360,18 @@
 
                         <div class="bookGenresContDetails">
                             <div class="genreAndTitleContDetails">
-                                <h1>Similar Titles</h1>
-                                <div class="bookGenreDetails">
-                                    <img class="leftRightIconsDetails" src="images/icons/leftIcon.svg">
-                                    <div class="bookImagesForSimilar">
-                                        <img class="bookDetailsForDetails" src="images/books/kiteRunnerDetails.svg">
-                                        <img class="bookDetailsForDetails" src="images/books/echoedDetails.svg">
-                                        <img class="bookDetailsForDetails" src="images/books/growDetails.svg">
-                                        <img class="bookDetailsForDetails" src="images/books/theifDetails.svg">
+                                <div class="carousel" data-carousel="similar">
+                                    <h1>Similar Titles</h1>
+                                    <div class="bookGenreDetails" id="bookResultsPadding">
+                                        <img class="leftRightIconsDetails left" src="images/icons/leftIcon.svg">
+                                        <div class="bookImagesForSimilar">
+                                            <img class="bookDetailsForDetails" src="images/books/kiteRunnerDetails.svg">
+                                            <img class="bookDetailsForDetails" src="images/books/echoedDetails.svg">
+                                            <img class="bookDetailsForDetails" src="images/books/growDetails.svg">
+                                            <img class="bookDetailsForDetails" src="images/books/theifDetails.svg">
+                                        </div>
+                                        <img class="leftRightIconsDetails right" src="images/icons/rightIcon.svg">
                                     </div>
-                                    <img class="leftRightIconsDetails" src="images/icons/rightIcon.svg">
                                 </div>
                             </div>
 

@@ -81,6 +81,11 @@
 
 }
 
+#bookResultsPadding {
+    padding-bottom: 25px;
+
+}
+
 #boldFontForResults {
     color: #000;
     font-size: 14px;

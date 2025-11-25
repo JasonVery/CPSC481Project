@@ -86,3 +86,9 @@
     aspect-ratio: 77/116;
     cursor: pointer;
 }
+
+/* Carousel Animation */
+.bookMainPage {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+
+}
