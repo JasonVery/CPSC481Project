@@ -128,7 +128,7 @@
                     <!-- Fake Data that will appear for search screen -->
                     <div class="searchResults">
                         <div class="bookResults">
-                            <div class="specificResult">
+                            <div class="specificResult demoBook1">
                                 <img class="bookCoverArt" src="images/books/searchMiles.svg">
                                 <div class="bookDetails">
                                     <div class="bookTitle">A Thousand Miles</div>
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
 
-                            <div class="specificResult">
+                            <div class="specificResult demoBook2">
                                 <img class="bookCoverArt" src="images/books/searchPieces.svg">
                                 <div class="bookDetails">
                                     <div class="bookTitle">A Thousand Pieces Of You</div>
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
 
-                            <div class="specificResult">
+                            <div class="specificResult demoBook3">
                                 <img class="bookCoverArt" src="images/books/searchSuns.svg">
                                 <div class="bookDetails">
                                     <div class="bookTitle">A Thousand Splendid Suns</div>
@@ -164,7 +164,7 @@
                                 </div>
                             </div>
 
-                            <div class="specificResult">
+                            <div class="specificResult demoBook4">
                                 <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
                                 <div class="bookDetails">
                                     <div class="bookTitle">A Thousand Tomorrows</div>
@@ -177,10 +177,10 @@
                             </div>
 
                             <div class="specificResult">
-                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <img class="bookCoverArt" src="images/books/blossom.svg">
                                 <div class="bookDetails">
-                                    <div class="bookTitle">A Thousand Tomorrows</div>
-                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="bookTitle">A Thousand Dogs</div>
+                                    <div class="bookAuthor">Author: Devanshi</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
                                         <span id="notAvail" class="availStatusUnavail">Unavailable</span>
@@ -189,10 +189,10 @@
                             </div>
 
                             <div class="specificResult">
-                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <img class="bookCoverArt" src="images/books/achilles.svg">
                                 <div class="bookDetails">
-                                    <div class="bookTitle">A Thousand Tomorrows</div>
-                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="bookTitle">A Thousand Shoes</div>
+                                    <div class="bookAuthor">Author: Sunny</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
                                         <span id="notAvail" class="availStatusUnavail">Unavailable</span>
@@ -201,10 +201,10 @@
                             </div>
 
                             <div class="specificResult">
-                                <img class="bookCoverArt" src="images/books/searchTomorrow.svg">
+                                <img class="bookCoverArt" src="images/books/sheGone.svg">
                                 <div class="bookDetails">
-                                    <div class="bookTitle">A Thousand Tomorrows</div>
-                                    <div class="bookAuthor">Author: Karen Kingsbury</div>
+                                    <div class="bookTitle">A Thousand Computers</div>
+                                    <div class="bookAuthor">Author: Jason</div>
                                     <div class="availWrapper">
                                         <span class="availLabel">Availability: </span>
                                         <span id="notAvail" class="availStatusUnavail">Unavailable</span>
@@ -236,7 +236,7 @@
 
                     <div class="searchResultsResult">
                         <div class="bookResultsResult">
-                            <div class="specificResultResult">
+                            <div class="specificResultResult demoBook1" data-book="miles">
                                 <img class="bookCoverArtResult" src="images/books/searchMiles.svg">
                                 <div class="bookDetailsResult">
                                     <div class="bookTitleResult"> <span id="boldFontForResults">Title: </span>A Thousand
@@ -254,7 +254,7 @@
                                 </div>
                             </div>
 
-                            <div class="specificResultResult">
+                            <div class="specificResultResult demoBook2" data-book="pieces">
                                 <img class="bookCoverArtResult" src="images/books/searchPieces.svg">
                                 <div class="bookDetailsResult">
                                     <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand
@@ -273,7 +273,7 @@
                             </div>
 
 
-                            <div class="specificResultResult" id="demoBook1">
+                            <div class="specificResultResult demoBook3" data-book="suns">
                                 <img class="bookCoverArtResult" src="images/books/searchSuns.svg">
                                 <div class="bookDetailsResult">
                                     <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand
@@ -292,8 +292,7 @@
                             </div>
 
 
-
-                            <div class="specificResultResult">
+                            <div class="specificResultResult demoBook4" data-book="tomorrows">
                                 <img class="bookCoverArtResult" src="images/books/searchTomorrow.svg">
                                 <div class="bookDetailsResult">
                                     <div class="bookTitleResult"><span id="boldFontForResults">Title: </span>A Thousand
@@ -327,21 +326,13 @@
                     <div class="bookDetailsCont">
                         <div class="bookInfoCont">
                             <div class="bookCoverArtImg">
-                                <img src="images/books/splendidSuns.svg">
+                                <img src="" id="detailsCoverImg">
                             </div>
                             <div class="bookDetailsSuns">
-                                <div class="bookTitleText">A Thousand Splendid Suns</div>
-                                <div class="bookAuthorText">Author: Khaled Hosseini</div>
+                                <div class="bookTitleText" id="detailsTitle"></div>
+                                <div class="bookAuthorText" id="detailsAuthor"></div>
                                 <div class="bookInfoTextCont">
-                                    <div class="bookInfoText">After more than two years on the bestseller lists and
-                                        over
-                                        four
-                                        million copies in print, Khaled Hosseini returns with a beautiful, riveting,
-                                        and
-                                        haunting
-                                        novel of enormous contemporary relevance.
-                                        A Thousand Splendid Suns is a breathtaking story set against the volatile
-                                        even...
+                                    <div class="bookInfoText" id="detailsDescription">
                                         <span id="showMoreText">Show More</span>
                                     </div>
                                 </div>
@@ -350,7 +341,7 @@
 
                         <div class="libraryDetailsCont">
                             <div class="availAndLocCont">
-                                <div class="availableAt">1 Available At Louise Riley Library</div>
+                                <div class="availableAt" id="detailsAvailability"></div>
                                 <div class="shelfLocation">View Shelf Location</div>
                             </div>
                             <div class="placeOnHoldBtnCont">

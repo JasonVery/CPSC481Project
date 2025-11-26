@@ -26,6 +26,7 @@
     display: flex;
     padding-bottom: 17px;
     gap: 15px;
+    cursor: pointer;
 }
 
 .bookCoverArt {

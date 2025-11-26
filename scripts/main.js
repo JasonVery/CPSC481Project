@@ -1,3 +1,45 @@
+// different book detail pages
+// 43 words for desc
+const bookDetails = {
+    suns: {
+        title: "A Thousand Splendid Suns",
+        author: "Khaled Hosseini",
+        img: "images/books/searchSuns.svg",
+        genre: "Classic, Historical, Fiction",
+        availability: "1 Available At Louise Riley Library",
+        description: "After more than two years on the bestseller lists and over four million copies in print, Khaled Hosseini returns with a beautiful, riveting, and haunting novel of enormous contemporary relevance. A Thousand Splendid Suns is a breathtaking story set against the volatile even..."
+    },
+
+    miles: {
+        title: "A Thousand Miles",
+        author: "Bridget Morrissey",
+        img: "images/books/searchMiles.svg",
+        genre: "Contemporary, Fiction, Romance",
+        availability: "2 Available At Louise Riley Library",
+        description: "Dee Matthews is the cohost of the smash-hit podcast Did I Forget To Tell You?, where she interviews family, friends, and past lovers. Nothing is off limits, except for one man (known on the show only as Name Redacted) who happens to be her high school best friend Ben. Gap Filler ..."
+
+    },
+
+    pieces: {
+        title: "A Thousand Pieces of You",
+        author: "Caludia Gray",
+        img: "images/books/searchPieces.svg",
+        genre: "Fiction, Fantasy, Romance, Young-Adult",
+        availability: "1 Available At Louise Riley Library",
+        description: "Marguerite Caine's physicist parents are known for their groundbreaking achievements. Their most astonishing invention, called the Firebird, allows users to jump into multiple universes—and promises to revolutionize science forever. But then Marguerite's father is murdered..."
+
+    },
+
+    tomorrows: {
+        title: "A Thousand Tomorrows",
+        author: "Karen Kingsbuy",
+        img: "images/books/searchTomorrow.svg",
+        genre: "Fiction, Fantasy, Romance, Young-Adult",
+        availability: "0 Available At Louise Riley Library",
+        description: "Cody Gunner has no use for real love. Abandoned as a child by the person he needed the most, he swears he will never allow himself to love again. Ali Daniels denies love as well. Carrying a terrible secret, she lives life to the fullest, taking risks and refusing relationships..."
+
+    }
+}
 
 // Main js file. Handles things like navigation and swithching pages
 // to make routing easier, everyhting is just in one html doc and just setting or removing
@@ -9,13 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const eyeCatcherStartBtn = document.querySelector(".eyeCatcherStartBtn");
     const searchBars = document.querySelectorAll(".searchBarCont");
     const keyboard = document.getElementById("keyboardContainer");
-    const demoBook1 = document.getElementById("demoBook1");
     const filterBtn = document.querySelector(".filterButtonWrapper");
     const showMore = document.getElementById("showMoreText");
     const location = document.querySelector(".shelfLocation");
     const placeOH = document.querySelector(".placeOnHoldBtnCont");
     const placeOHSuccess = document.getElementById("successPopup");
     const popupCloseBtns = document.querySelectorAll(".popupClose");
+
+    const demoBook1 = document.querySelectorAll(".demoBook1");
+    const demoBook2 = document.querySelectorAll(".demoBook2");
+    const demoBook3 = document.querySelectorAll(".demoBook3");
+    const demoBook4 = document.querySelectorAll(".demoBook4");
+
 
     let currentPage = "eye";
 
@@ -116,6 +163,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // Universal function to dynamically inject each book detail page 
+    // with the proper information
+    function generateBookDetails(bookID) {
+        const book = bookDetails[bookID];
+        if (!book) {
+            return;
+        }
+
+        loadDetailsPage();
+
+        // Keeping these here to keep the rest of the definitions clean 
+        document.getElementById("detailsCoverImg").src = book.img;
+        document.getElementById("detailsTitle").textContent = book.title;
+        document.getElementById("detailsAuthor").textContent = "Author: " + book.author;
+        document.getElementById("detailsAvailability").textContent = book.availability;
+        const avail = document.getElementById("detailsAvailability");
+        const shelf = document.querySelector(".shelfLocation");
+        avail.textContent = book.availability;
+        const isUnavailable = book.availability.startsWith("0");
+
+        // Handeling the case where the book is unavailable. Probably want to hide the map aswell and chaneg font colour
+        if (isUnavailable) {
+            avail.style.color = "red";
+            shelf.style.display = "none";
+        } else {
+            avail.style.color = "";
+            shelf.style.display = "block";
+        }
+
+        const desc = document.getElementById("detailsDescription");
+        desc.innerHTML = book.description + `<span id="showMoreText">Show More</span>`;
+    }
+
 
     // Functions for eye catcher page
     if (eyeCatcherHelpBtn) {
@@ -192,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (placeOHSuccess) {
         placeOHSuccess.addEventListener("click", function () {
-            console.log("Place On Hold Success has been presses");
+            console.log("Place On Hold Success has been pressed");
             closePopup("placeHoldPopup");
             openPopup("holdSuccessPopup");
 
@@ -200,11 +280,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (demoBook1) {
-        demoBook1.addEventListener("click", function () {
-            console.log("Demo Book 1: Splendid Suns has been pressed");
-            loadDetailsPage();
+        demoBook1.forEach(book => {
+            book.addEventListener("click", function () {
+                console.log("Demo Book 1: A Thousand Miles has been pressed");
+                generateBookDetails("miles");
+            });
+
+        })
+    }
+
+    if (demoBook2) {
+        demoBook2.forEach(book => {
+            book.addEventListener("click", function () {
+                console.log("Demo Book 2: A Thousand Pieces of You has been pressed");
+                generateBookDetails("pieces");
+            });
+
         });
     }
+
+    if (demoBook3) {
+        demoBook3.forEach(book => {
+            book.addEventListener("click", function () {
+                console.log("Demo Book 3: A Thousand Splendid Suns has been pressed");
+                generateBookDetails("suns");
+            });
+
+        });
+    }
+
+    if (demoBook4) {
+        demoBook4.forEach(book => {
+            book.addEventListener("click", function () {
+                console.log("Demo Book 4: A Thousand Tomorrows has been pressed");
+                generateBookDetails("tomorrows");
+            });
+        });
+    }
+
 
     // Universal handeling to close popups
     popupCloseBtns.forEach(btn => {
@@ -216,7 +329,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
-
 
     // This simulates hitting search so we will now load the result page
     keyboard.addEventListener("click", function () {
