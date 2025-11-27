@@ -473,9 +473,9 @@
                     <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
 
                     <input type="text" class="emailBox" placeholder="Enter email...">
-                    <input type="password" id="passwordBox" class="passwordBox" placeholder="Enter password...">
+                    <input type="password" id="passwordBoxHold" class="passwordBox" placeholder="Enter password...">
 
-                    <button class="showPassword" id="showPassword"> <img class="showPasswordImg" id="showPasswordImg"
+                    <button class="showPassword" id="showPasswordHold"> <img class="showPasswordImg" id="showPasswordImgHold"
                             src="images/icons/passwordEyeClosed.svg"></button>
 
                     <div class="buttonLogIn">
@@ -628,68 +628,243 @@
                     <h1>Select Filters:</h1>
 
                     <div class="filterScrollWrapper">
-                        <button type="button" class="collapsible" style="margin-top: 50px"> Format <img
+                        <button type="button" class="collapsible" style="margin-top: 10px"> Format <img
                                 class="filterArrow" src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <label class="filterContent">One
+                            <label class="filterContent">Book
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="filterContent">Two
+                            <label class="filterContent">eBook
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="filterContent">Three
+                            <label class="filterContent">Graphic Novel
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Large Print
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Oversize Book
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Board Book
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
 
-                        <button type="button" class="collapsible">Content<img class="filterArrow"
+                        <button type="button" class="collapsible" unchecked>Content<img class="filterArrow"
                                 src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <p>Lorem ipsum...</p>
+                            <label class="filterContent">Non-Fiction
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Fiction
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Undetermined
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
+
                         <button type="button" class="collapsible">Genre<img class="filterArrow"
                                 src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <p>Lorem ipsum...</p>
+                            <label class="filterContent">Action
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Adventure
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Comedy
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Crime and Mystery
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Fantasy
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Historial
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Horror
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Romance
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Science Fiction
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Spectulative
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Thriller
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
-                        <button type="button" class="collapsible">Topic<img class="filterArrow"
+
+                        <button type="button" class="collapsible">Audience <img class="filterArrow"
                                 src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <p>Lorem ipsum...</p>
+                            <label class="filterContent">Adult
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Teens
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Children
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
+
                         <button type="button" class="collapsible">Languages<img class="filterArrow"
                                 src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <p>Lorem ipsum...</p>
+                            <label class="filterContent">Include Translations
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">English
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">French
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Spanish
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">German
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Spanish
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Cree
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
-                        <button type="button" class="collapsible">Publication<img class="filterArrow"
+
+                        <button type="button" class="collapsible">Rating<img class="filterArrow"
                                 src="images/icons/dropDownPopup.svg"> </button>
                         <div class="content">
-                            <p>Lorem ipsum...</p>
+                            <label class="filterContent">4+ stars
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">3-4 stars
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">2-3 stars
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">1-2 stars
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
-                    </div>
 
-                    <div class="buttonFilter">
-                        <button class="selectFilterPopup popupClose">Apply</button>
-                        <button class="selectFilterPopup popupClose">Clear</button>
+                        <button type="button" class="collapsible">New at the Library<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <label class="filterContent">Past 7 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Past 30 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Past 60 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Past 90 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="filterContent">Past 180 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Over 180 days
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                        </div>
+
+                        <button type="button" class="collapsible">Regions<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <label class="filterContent">Alberta
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Canada
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">United States
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Calgary
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                             <label class="filterContent">Great Britain
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Europe
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Ontario
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="buttonFilter">
+                            <button class="selectFilterPopup popupClose">Apply</button>
+                            <button class="selectFilterPopup popupClose">Clear</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
         </div>
-    </div>
-
-</body>
-
+    </body>
 </html>
