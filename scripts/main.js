@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // Login variables
+    // Login/ profile variables
     let isLoggedIn = false;
     let isTryingToHold = false;
     const loginGoodBtn = document.querySelectorAll(".loginGoodBtn");
@@ -94,6 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutAcc = document.querySelector(".logoutAcc");
     const logOffChangeName = document.querySelector(".logOffMain");
     const backToProfile = document.querySelector(".backToProfile");
+    const bookRoom = document.querySelector(".bookRoomBtn");
+    const roomBooked = document.querySelector(".roomBooked");
+    const retunToProf = document.querySelector(".returnToProf");
 
 
 
@@ -175,9 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         popup.classList.add("hidden");
 
-        let pages = document.querySelectorAll(".page");
-        pages.forEach(page => page.classList.remove("blurred"));
+        const anyOpen = document.querySelectorAll(".popup:not(.hidden)").length > 0; 
+
+        // Only removing blur if all popups are closed.
+        if (!anyOpen) {
+        document.querySelectorAll(".page").forEach(page => page.classList.remove("blurred"));
         keyboard.classList.remove("blurred");
+    }
     }
 
 
@@ -289,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.addEventListener("click", function () {
                 isLoggedIn = false;
                 loginLabel.innerHTML = "Login";
+                loadMainPage();
 
             });
         });
@@ -305,6 +313,12 @@ document.addEventListener("DOMContentLoaded", function () {
         logOffChangeName.addEventListener("click", function () {
             isLoggedIn = false;
             loginLabel.innerHTML = "Login";
+            console.log("Opening auto logout popup");
+            openPopup("automaticLogoutPopup");
+            // 10 second refresh can shorten
+            setInterval(() => {
+                window.location.reload()
+            }, 9000);
         });
     }
 
@@ -312,6 +326,28 @@ document.addEventListener("DOMContentLoaded", function () {
         backToProfile.addEventListener("click", function () {
             openPopup("profilePopup");
         });
+    }
+
+    if (bookRoom) {
+        bookRoom.addEventListener("click", function () {
+            console.log("Book Room Popup has been clicked");
+            openPopup("roomBooking");
+
+        });
+    }
+
+    if (roomBooked) {
+        roomBooked.addEventListener("click", function () {
+            console.log("Confirming Booked Room");
+            openPopup("roomBookingSuccess");
+        });
+    }
+
+    if (retunToProf) {
+        retunToProf.addEventListener("click", function () {
+            console.log("Returning to profile");
+            openPopup("profilePopup");
+        })
     }
 
 
@@ -416,6 +452,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // JJ show password functions 
+    const passwordInput = document.getElementById("passwordBox")
+    const passwordButton = document.getElementById("showPassword")
+    const imageUsed = document.getElementById("showPasswordImg")
+
+    passwordButton.addEventListener('click', function () {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            imageUsed.src = 'images/icons/passwordEyeOpen.svg';
+        } else {
+            passwordInput.type = 'password';
+            imageUsed.src = 'images/icons/passwordEyeClosed.svg';
+        }
+    });
+
 
 
     // Universal handeling to close popups

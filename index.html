@@ -13,7 +13,7 @@
     <link rel="styleSheet" href="styles/loginPopupStyles.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/bookCarousel.js" defer></script>
-    <script src="scripts/autoLogout.js" defer></script>
+    <!-- <script src="scripts/autoLogout.js" defer></script> -->
     <title>Library Kiosk</title>
 </head>
 
@@ -435,7 +435,8 @@
                 </div>
             </div>
 
-            <!-- Login general popup -->
+
+            <!-- log in: general popup -->
             <div id="logIn" class="popup hidden" data-popup="logIn">
                 <div class="popupBox4">
                     <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
@@ -444,11 +445,14 @@
                     <h2>To log into your profile, please scan your library card on the scanner attached to the kiosk, or
                         enter your information below:</h2>
 
-                    <input type="text" class="emailBox" placeholder="Enter email...">
                     <img class="userEmailImg" src="images/icons/loginUserNamePopup.svg">
-
-                    <input type="password" class="passwordBox" placeholder="Enter password...">
                     <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
+
+                    <input type="text" class="emailBox" placeholder="Enter email...">
+                    <input type="password" id="passwordBox" class="passwordBox" placeholder="Enter password...">
+
+                    <button class="showPassword" id="showPassword"> <img class="showPasswordImg" id="showPasswordImg"
+                            src="images/icons/passwordEyeClosed.svg"></button>
 
                     <div class="buttonLogIn">
                         <button class="logInPopup popupClose loginGoodBtn">Log-In</button>
@@ -457,7 +461,6 @@
                 </div>
             </div>
 
-            <!-- log in: put book on hold popup.-->
             <div id="logInHold" class="popup hidden" data-popup="logInHold">
                 <div class="popupBox4">
                     <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
@@ -466,11 +469,15 @@
                     <h2>You must sign in to put this book on hold. Please scan your library card on the scanner attached
                         to the kiosk, or enter your information below:</h2>
 
-                    <input type="text" class="emailBox" placeholder="Enter email...">
                     <img class="userEmailImg" src="images/icons/loginUserNamePopup.svg">
-
-                    <input type="password" class="passwordBox" placeholder="Enter password...">
                     <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
+
+                    <input type="text" class="emailBox" placeholder="Enter email...">
+                    <input type="password" id="passwordBox" class="passwordBox" placeholder="Enter password...">
+
+                    <button class="showPassword" id="showPassword"> <img class="showPasswordImg" id="showPasswordImg"
+                            src="images/icons/passwordEyeClosed.svg"></button>
+
                     <div class="buttonLogIn">
                         <button class="logInPopup popupClose loginGoodBtn">Log-In</button>
                         <button class="logInPopup popupClose">Cancel</button>
@@ -494,6 +501,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- automatic logout popup -->
+            <div id="automaticLogoutPopup" class="popup hidden" data-popup="automaticLogoutPopup">
+                <div class="popupBoxAutomaticLogout">
+                    <h1>Thank you for visiting the Calgary Public Library!</h1>
+                    <p>You have been successfully logged<br>out.
+                        This page will close automatically in 10 seconds.<br>
+                        We hope you have a wonderful rest of your day.
+                        Happy reading!</p>
+                </div>
+            </div>
+
 
 
             <!-- account Popup  -->
@@ -529,7 +548,8 @@
                         </div>
 
                         <div class="row4">
-                            <button class="profileButtons"> <span>Book a Private Room</span></button>
+                            <button class="profileButtons bookRoomBtn popupClose"> <span>Book a Private
+                                    Room</span></button>
                             <button class="profileButtons popupClose"><span>Close profile and continue
                                     browsing</span></button>
 
@@ -539,6 +559,63 @@
                             <button class="logoutAcc popupClose"><span>Log Out</span></button>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+            <div id="roomBooking" class="popup hidden" data-popup="roomBooking">
+                <div class="roomBookingPopup">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+                    <h1>Room Booking</h1>
+
+                    <div class="roomsSection">
+                        <div class="topRoomBookingWrapper">
+                            <p class="library roomInfoText">Rooms at: <br><span>Louise Riley Library</span></p>
+                            <p class="library selectTimeText">Select A Time</p>
+                        </div>
+                        <div class="room">
+                            <p class="roomName">Room 10A</p>
+                            <div class="times">
+                                <label><input type="radio" name="room10A" value="10:00 am"> 10:00 am</label>
+                                <label><input type="radio" name="room10A" value="2:00 pm"> 2:00 pm</label>
+                                <label><input type="radio" name="room10A" value="5:00 pm"> 5:00 pm</label>
+                            </div>
+                        </div>
+
+                        <div class="room unavailable">
+                            <p class="roomName">Room 10B</p>
+                            <p class="unavailableText">Unavailable</p>
+                        </div>
+
+                        <div class="room">
+                            <p class="roomName">Room 30A</p>
+                            <div class="times">
+                                <label><input type="radio" name="room30A" value="9:00 am"> 9:00 am</label>
+                                <label><input type="radio" name="room30A" value="12:00 pm"> 12:00 pm</label>
+                            </div>
+                        </div>
+
+                        <div class="selectedRoomCont">
+                            <p class="selected">Selected Room and Time: <span id="selectedRoom">Room 10A at
+                                    2:00pm</span></p>
+                        </div>
+                    </div>
+
+                    <div class="confirmCancelWrapper">
+                        <button class="roomBooked popupClose">Confirm</button>
+                        <button class="cancelPopup popupClose returnToProf" id="cancelRoomBooked">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="roomBookingSuccess" class="popup hidden" data-popup="roomBookingSuccess">
+                <div class="popupBox8">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+                    <div class="roomSuccessText">Room Booking Successful</div>
+                    <div class="roomSuccessInfoText">Your room has been successfully booked! Please check your email for
+                        details.</div>
+                    <button class="profilePopup popupClose returnToProf">Return to profile</button>
                 </div>
             </div>
 

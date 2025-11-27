@@ -88,7 +88,6 @@
 
 }
 
-
 .emailBox {
     padding-left: 30px;
     margin-top: -5px;
@@ -123,8 +122,9 @@
 
 .passwordBox {
     padding-left: 30px;
+    padding-right: 25px;
 
-    width: 165px;
+    width: 143px;
     height: 20px;
     border-radius: 2px;
     background: linear-gradient(to right, #007793 25px, #D9D9D9 0%);
@@ -151,13 +151,22 @@
     left: 84px;
 }
 
-.showPassword {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #333;
+.showPasswordImg {
+    height: 18px;
 }
+
+.showPassword {
+    border-radius: 2px;
+    position: absolute;
+    height: 21px;
+    cursor: pointer;
+    top: 140px;
+    right: 81px;
+    size: 18px;
+    border: None;
+    background-color: #D9D9D9;
+}
+
 
 
 
@@ -495,4 +504,212 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+/* ==========================================================================
+                   POPUP STYLES FOR BOOK ROOM
+   ========================================================================== */
+.roomBookingPopup {
+    width: 380px;
+    height: 527px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topRoomBookingWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.roomInfoText {
+    text-align: center;
+
+}
+
+.selectTimeText {
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+#roomBooking h1 {
+    width: 175px;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.roomBooked {
+    width: 71px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#cancelRoomBooked{
+    width: 71px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.roomsSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px 25px;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    color: #000;
+}
+
+.library span {
+    color: #17620D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.room {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.roomName {
+    width: 120px;
+    font-weight: 600;
+}
+
+.confirmCancelWrapper {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+
+}
+
+.times label {
+    display: block;
+    color: #17620D;
+    margin: 2px 0;
+}
+
+.unavailable {
+    color: #D3D3D3;
+}
+
+.unavailableText {
+    font-style: italic;
+}
+
+.selectedRoomCont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ccc;;
+    margin-top: 14px;
+}
+
+.selected {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.selected span {
+    color: #007793;
+    text-decoration: underline;
+}
+
+
+/* Successful room Booking */
+.popupBox8 {
+    width: 365px;
+    height: 161px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roomSuccessText {
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0px;
+    margin-top: 10px;
+}
+
+.roomSuccessInfoText {
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+    width: 270px;
+    text-align: center;
+}
+
+.profilePopup {
+    width: 119px;
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    margin-top: 30px;
 }
