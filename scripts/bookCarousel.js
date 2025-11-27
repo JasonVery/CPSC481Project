@@ -60,25 +60,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        // Swap
         if (leftBtn) {
             leftBtn.addEventListener("click", function () {
-                carourselBooks[genre].push(carourselBooks[genre].shift());
+                carourselBooks[genre].unshift(carourselBooks[genre].pop());
                 updateCarousel();
             });
         }
 
         if (rightBtn) {
             rightBtn.addEventListener("click", function () {
-                carourselBooks[genre].unshift(carourselBooks[genre].pop());
+                carourselBooks[genre].push(carourselBooks[genre].shift());
                 updateCarousel();
             });
         }
 
-        // Can get rid of this if you guys dont like but i thought it was a nice addition for minimal work
-        setInterval(() => {
-            carourselBooks[genre].unshift(carourselBooks[genre].pop());
-            updateCarousel();
-        }, 5000);
+        // // Can get rid of this if you guys dont like but i thought it was a nice addition for minimal work
+        // setInterval(() => {
+        //     carourselBooks[genre].unshift(carourselBooks[genre].pop());
+        //     updateCarousel();
+        // }, 5000);
 
         updateCarousel();
 

@@ -1,0 +1,498 @@
+/* ==========================================================================
+                   POPUP STYLES FOR LOGIN FUNCTIONS
+   ========================================================================== */
+
+#logIn h1 {
+    margin-top: 11px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#logIn h2 {
+    margin-top: -25px;
+    width: 300px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#logInHold h1 {
+    margin-top: 11px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#logInHold h2 {
+    margin-top: -25px;
+    width: 300px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.popupBox4 {
+    width: 359px;
+    height: 233px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+.buttonLogIn {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    gap: 40px;
+}
+
+.logInPopup {
+    width: 71px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+    margin-top: -12px;
+    font-size: 15px;
+
+}
+
+
+.emailBox {
+    padding-left: 30px;
+    margin-top: -5px;
+    width: 165px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #D9D9D9;
+    background: linear-gradient(to right, #007793 25px, #D9D9D9 0%);
+    border: none;
+
+
+    display: inline-block;
+    color: #000000;
+    font-family: "Crimson Text";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.emailBox::placeholder {
+    color: #979797
+}
+
+.userEmailImg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 112px;
+    left: 84px;
+}
+
+.passwordBox {
+    padding-left: 30px;
+
+    width: 165px;
+    height: 20px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #007793 25px, #D9D9D9 0%);
+    border: none;
+
+    display: inline-block;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.passwordBox::placeholder {
+    color: #979797
+}
+
+.userPswrdImg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 141px;
+    left: 84px;
+}
+
+.showPassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+
+
+/* log off popup */
+
+#logOff h1 {
+    margin-top: 11px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#logOff h2 {
+    margin-top: -25px;
+    width: 300px;
+    text-align: center;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.popupBox5 {
+    width: 359px;
+    height: 123px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+.buttonLogOff {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    gap: 40px;
+}
+
+.logOffPopup {
+    width: 71px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+    margin-top: -12px;
+    font-size: 15px;
+
+}
+
+/* ==========================================================================
+                   POPUP STYLES FOR ACCOUNT FUNCTIONS
+   ========================================================================== */
+/* Automatic Logout and Profile page */
+
+.popupBoxAutomaticLogout {
+    width: 295px;
+    height: 190px;
+    background: #FFFBFB;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 5px 25px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+.popupBoxProfile {
+
+    width: 330px;
+    height: 460px;
+    background: #FFFBFB;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px 25px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+
+}
+
+
+#profilePopup h1 {
+    width: 131px;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    margin-top: 0;
+    top: -6px;
+
+}
+
+
+
+#profilePopup img .exitPopup {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1/1;
+
+}
+
+
+.row2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-24px);
+
+}
+
+.row3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-29px);
+
+}
+
+.row4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-68px);
+    gap: 25px;
+
+
+}
+
+.row5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-53px);
+}
+
+.holdsAndPtofileBooks {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+#libraryNameBottom {
+    margin-left: 30px;
+}
+
+
+
+.profilePicture {
+    width: 106px;
+    height: 106px;
+    margin-right: 50px;
+}
+
+.profileName {
+    width: 92px;
+    height: 31px;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px;
+}
+
+.libraryName {
+    width: 164px;
+    height: 31px;
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.textGreen {
+    color: #17620D;
+}
+
+.row3 p {
+    width: 150px;
+    height: 25px;
+    color: #000;
+    font-family: "Marcellus SC";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 0px;
+
+}
+
+.row3 #search {
+    width: 140px;
+    height: 20px;
+    border-radius: 15px;
+    background: #D9D9D9;
+    margin-right: 0px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+
+}
+
+.row3 img {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1/1;
+    filter: brightness(0%);
+    margin-left: 5px;
+
+}
+
+#profileBookRow .bookGenre {
+    transform: translateY(-57px);
+}
+
+.profileBook {
+    width: 66px;
+    height: 102px;
+    aspect-ratio: 11/17;
+}
+
+#profileBook {
+    margin-bottom: 40px;
+}
+
+
+
+#automaticLogoutPopup h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0px 0px 0px 0px;
+
+}
+
+
+#automaticLogoutPopup p {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 1.4;
+    width: 250px;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+#automaticLogoutPopup .popupBox1 {
+    padding-top: 10px;
+
+}
+
+
+
+.profileButtons {
+    width: 98px;
+    height: 60px;
+    fill: #EEEAEA;
+    border: 1px solid #007793;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.profileBook span {
+    width: 82px;
+
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.logOutAcc {
+    width: 77px;
+    height: 29px;
+    fill: #EEEAEA;
+    border: 1px solid #007793;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.logOutAcc span {
+    color: #000;
+    text-align: center;
+    font-family: "Crimson Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -2,7 +2,6 @@
                    POPUP STYLES
    ========================================================================== */
 
-
 /* Request Assistance */
 .popup {
     position: fixed;
@@ -237,3 +236,124 @@
     margin-top: -12px;
     font-size: 15px;
 }
+
+
+/* ==========================================================================
+                   FILTER BTN POPUP STYLES
+   ========================================================================== */
+#selectFilter h1 {
+    position: absolute;
+    left: 19px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    text-align: left;
+    color: #000;
+    font-family: "Crimson Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.popupBox6 {
+    flex-direction: column;
+    width: 282px;
+    height: 451px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 5px solid #007793;
+    background: #FFFBFB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+/* .filterScrollWrapper{
+    margin-top: 4px;
+    height: 400px;
+    width: 100%;
+    overflow-y: auto;
+} */
+
+.buttonFilter {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    gap: 20px;
+}
+
+.selectFilterPopup{
+    width: 71px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #007793;
+    background: #EEEAEA;
+    cursor: pointer;
+    font-family: "Crimson Text";
+    margin-top: -12px;
+    font-size: 15px;
+
+}
+
+
+ /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #FFFBFB;
+  color: #444;
+  cursor: pointer;
+  margin-top: -10px;
+  padding: 8px;
+
+  padding-left: 20px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9B9B9B;;
+  border-top: 2px solid #9B9B9B;;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-family: "Crimson Text";
+  font-style: normal;
+}
+
+.filterArrow{
+    position: absolute;
+    right: 30px;
+    margin-bottom: -5px;
+}
+
+
+.collapsible.active {
+    border-bottom: 2px solid #9b9b9b34;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  width: 150px;
+  padding-bottom: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+/* checkboxes */
+.filterContent{
+    display: block;
+    white-space: nowrap;
+}
+
+.filterContent input {
+  left: 40px;
+  position: absolute;
+  cursor: pointer;
+  text-align: right;
+  float: right;
+}
+
+
+

@@ -10,6 +10,7 @@
     <link rel="styleSheet" href="styles/searchPageStyles.css">
     <link rel="styleSheet" href="styles/resultsPageStyles.css">
     <link rel="styleSheet" href="styles/popupStyles.css">
+    <link rel="styleSheet" href="styles/loginPopupStyles.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/bookCarousel.js" defer></script>
     <script src="scripts/autoLogout.js" defer></script>
@@ -50,7 +51,7 @@
 
                 <div class="navItem" id="loginBtn">
                     <img src="images/icons/User.svg" class="navIcon">
-                    <span class="navLabel">Login</span>
+                    <span class="navLabel" id="loginLabel">Login</span>
                 </div>
             </div>
 
@@ -371,6 +372,7 @@
                 </div>
             </div>
 
+
             <!-- ==========================================================================
                       POPUPS
    ========================================================================== -->
@@ -428,10 +430,185 @@
                     <h3>Your book has been successfully put on hold!</h3>
                     <div class="buttonRow">
                         <button class="browsePopup popupClose">Stay logged in and continue browsing</button>
-                        <button class="browsePopup popupClose">Log out and return to home page</button>
+                        <button class="browsePopup popupClose logoutBtn">Log out and return to home page</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Login general popup -->
+            <div id="logIn" class="popup hidden" data-popup="logIn">
+                <div class="popupBox4">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    <h1>Log-In</h1>
+                    <h2>To log into your profile, please scan your library card on the scanner attached to the kiosk, or
+                        enter your information below:</h2>
+
+                    <input type="text" class="emailBox" placeholder="Enter email...">
+                    <img class="userEmailImg" src="images/icons/loginUserNamePopup.svg">
+
+                    <input type="password" class="passwordBox" placeholder="Enter password...">
+                    <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
+
+                    <div class="buttonLogIn">
+                        <button class="logInPopup popupClose loginGoodBtn">Log-In</button>
+                        <button class="logInPopup popupClose">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- log in: put book on hold popup.-->
+            <div id="logInHold" class="popup hidden" data-popup="logInHold">
+                <div class="popupBox4">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    <h1>Log-In</h1>
+                    <h2>You must sign in to put this book on hold. Please scan your library card on the scanner attached
+                        to the kiosk, or enter your information below:</h2>
+
+                    <input type="text" class="emailBox" placeholder="Enter email...">
+                    <img class="userEmailImg" src="images/icons/loginUserNamePopup.svg">
+
+                    <input type="password" class="passwordBox" placeholder="Enter password...">
+                    <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
+                    <div class="buttonLogIn">
+                        <button class="logInPopup popupClose loginGoodBtn">Log-In</button>
+                        <button class="logInPopup popupClose">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- log off popup -->
+            <div id="logOff" class="popup hidden" data-popup="logOff">
+                <div class="popupBox5">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    <h1>Log-Off</h1>
+                    <h2>Would you like to log off and return to the home menu?</h2>
+
+                    <div class="buttonLogOff">
+                        <button class="logOffPopup popupClose backToProfile" style="width: 133px;">Return to profile
+                        </button>
+                        <button class="logOffPopup popupClose logOffMain" style="width: 133px;">Log-off</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- account Popup  -->
+            <div id="profilePopup" class="popup hidden">
+                <div class="popupBoxProfile">
+                    <h1>My Account</h1>
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    <div class="row2">
+                        <img class="profilePicture" src="images/icons/accountIconPopup.svg">
+                        <p> <span class="profileName">Hello, Ann!</span><br><span class="libraryName">Welcome to the
+                                <span class="textGreen"> Louise<br> </spans> <span id="libraryNameBottom">Riley
+                                        Library.</span></p>
+                    </div>
+
+                    <div class="holdsAndPtofileBooks">
+                        <div class="row3">
+                            <p>CURRENT HOLDS</p>
+                            <div id="search"> <img src="images/icons/Search.svg"> </div>
+                        </div>
+
+                        <div class="" id="profileBookRow">
+                            <div class="genreAndTitleCont">
+                                <div class="bookGenre">
+                                    <img class="leftRightIcons" src="images/icons/leftIcon.svg">
+                                    <img class="profileBook" src="images/books/searchPieces.svg">
+                                    <img class="profileBook" src="images/books/achilles.svg">
+                                    <img class="profileBook" src="images/books/midnightLib.svg">
+                                    <img class="profileBook" src="images/books/patient.svg">
+                                    <img class="leftRightIcons" src="images/icons/rightIcon.svg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row4">
+                            <button class="profileButtons"> <span>Book a Private Room</span></button>
+                            <button class="profileButtons popupClose"><span>Close profile and continue
+                                    browsing</span></button>
+
+                        </div>
+
+                        <div class="row5">
+                            <button class="logoutAcc popupClose"><span>Log Out</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- select filters popup -->
+            <div id="selectFilter" class="popup hidden" data-popup="selectFilter">
+                <div class="popupBox6">
+                    <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    <h1>Select Filters:</h1>
+
+                    <div class="filterScrollWrapper">
+                        <button type="button" class="collapsible" style="margin-top: 50px"> Format <img
+                                class="filterArrow" src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <label class="filterContent">One
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Two
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filterContent">Three
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <button type="button" class="collapsible">Content<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                        <button type="button" class="collapsible">Genre<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                        <button type="button" class="collapsible">Topic<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                        <button type="button" class="collapsible">Languages<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                        <button type="button" class="collapsible">Publication<img class="filterArrow"
+                                src="images/icons/dropDownPopup.svg"> </button>
+                        <div class="content">
+                            <p>Lorem ipsum...</p>
+                        </div>
+                    </div>
+
+                    <div class="buttonFilter">
+                        <button class="selectFilterPopup popupClose">Apply</button>
+                        <button class="selectFilterPopup popupClose">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
 
         </div>
     </div>

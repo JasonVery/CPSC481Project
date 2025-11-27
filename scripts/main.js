@@ -58,12 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const placeOHSuccess = document.getElementById("successPopup");
     const popupCloseBtns = document.querySelectorAll(".popupClose");
 
+
+
+    // Books that open book details page
     const demoBook1 = document.querySelectorAll(".demoBook1");
     const demoBook2 = document.querySelectorAll(".demoBook2");
     const demoBook3 = document.querySelectorAll(".demoBook3");
     const demoBook4 = document.querySelectorAll(".demoBook4");
-
-
     let currentPage = "eye";
 
 
@@ -82,6 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const helpBtn = document.getElementById("helpBtn");
     const loginBtn = document.getElementById("loginBtn");
 
+
+
+    // Login variables
+    let isLoggedIn = false;
+    let isTryingToHold = false;
+    const loginGoodBtn = document.querySelectorAll(".loginGoodBtn");
+    const loginLabel = document.getElementById("loginLabel");
+    const logoutBtn = document.querySelectorAll(".logoutBtn");
+    const logoutAcc = document.querySelector(".logoutAcc");
+    const logOffChangeName = document.querySelector(".logOffMain");
+    const backToProfile = document.querySelector(".backToProfile");
+
+
+
+
     // Function to reset the UI between page changes
     function resetPage() {
         const pages = document.querySelectorAll(".page")
@@ -94,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
         backBtn.classList.add("hidden");
         homeBtn.classList.add("hidden");
     }
+
+
 
 
     //  Function to load page elements
@@ -161,6 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
         pages.forEach(page => page.classList.remove("blurred"));
         keyboard.classList.remove("blurred");
     }
+
+
 
 
     // Universal function to dynamically inject each book detail page 
@@ -239,14 +259,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (loginBtn) {
         loginBtn.addEventListener("click", function () {
-            console.log("Login Button Has been Pressed")
+            if (isLoggedIn === false) {
+                console.log("Not logged in, show login popup");
+                openPopup("logIn");
+            } else {
+                console.log("Already Logged in, show member popup");
+                openPopup("profilePopup");
+            }
 
         });
     }
 
+    if (loginGoodBtn) {
+        loginGoodBtn.forEach(btn => {
+            btn.addEventListener("click", function () {
+                isLoggedIn = true;
+                loginLabel.innerHTML = "Ann";
+
+                if (isTryingToHold === true) {
+                    openPopup("placeHoldPopup");
+                }
+            });
+
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.forEach(btn => {
+            btn.addEventListener("click", function () {
+                isLoggedIn = false;
+                loginLabel.innerHTML = "Login";
+
+            });
+        });
+    }
+
+    if (logoutAcc) {
+        logoutAcc.addEventListener("click", function () {
+            isLoggedIn = false;
+            openPopup("logOff");
+        });
+    }
+
+    if (logOffChangeName) {
+        logOffChangeName.addEventListener("click", function () {
+            isLoggedIn = false;
+            loginLabel.innerHTML = "Login";
+        });
+    }
+
+    if (backToProfile) {
+        backToProfile.addEventListener("click", function () {
+            openPopup("profilePopup");
+        });
+    }
+
+
     if (filterBtn) {
         filterBtn.addEventListener("click", function () {
             console.log("Filter Button Has Been Pressed");
+            openPopup("selectFilter");
         });
     }
 
@@ -265,8 +337,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (placeOH) {
         placeOH.addEventListener("click", function () {
-            console.log("Place On Hold has been pressed");
-            openPopup("placeHoldPopup");
+            if (isLoggedIn === false) {
+                openPopup("logInHold");
+                isTryingToHold = true;
+
+            } else {
+                console.log("Place On Hold has been pressed");
+                openPopup("placeHoldPopup");
+            }
         });
     }
 
@@ -279,6 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+
+
+    // Routing to display demo books
     if (demoBook1) {
         demoBook1.forEach(book => {
             book.addEventListener("click", function () {
@@ -319,6 +400,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // JJ collapsible function for filter 
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            console.log("Toggled drop down");
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+
     // Universal handeling to close popups
     popupCloseBtns.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -329,6 +428,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
+
+
 
     // This simulates hitting search so we will now load the result page
     keyboard.addEventListener("click", function () {
