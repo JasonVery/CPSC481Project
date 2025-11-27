@@ -468,6 +468,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const passwordInputHold = document.getElementById("passwordBoxHold")
+    const passwordButtonHold = document.getElementById("showPasswordHold")
+    const imageUsedHold = document.getElementById("showPasswordImgHold")
+
+    passwordButtonHold.addEventListener('click', function () {
+        if (passwordInputHold.type === 'password') {
+            passwordInputHold.type = 'text';
+            imageUsedHold.src = 'images/icons/passwordEyeOpen.svg';
+        } else {
+            passwordInputHold.type = 'password';
+            imageUsedHold.src = 'images/icons/passwordEyeClosed.svg';
+        }
+    });
+
 
 
     // Universal handeling to close popups
