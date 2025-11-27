@@ -717,7 +717,7 @@
 }
 
 .exitPopup {
-    position: absolute;   /* child positioned relative to parent */
+    position: absolute;
     top: 10px;
     right: 10px;
     width: 20px;
