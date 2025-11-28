@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // 10 second refresh can shorten
             setInterval(() => {
                 window.location.reload()
-            }, 9000);
+            }, 5000);
         });
     }
 
