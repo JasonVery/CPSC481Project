@@ -88,6 +88,21 @@
 
 }
 
+.loginError {
+    color: #000; /* */
+    font-size: 0.7em;
+    margin-top: 0px;
+}
+
+#logButton:disabled{
+    cursor: not-allowed;
+}
+
+#logButton:enabled{
+    cursor: pointer;
+}
+
+
 .emailBox {
     padding-left: 30px;
     margin-top: -5px;

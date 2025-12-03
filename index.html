@@ -439,7 +439,10 @@
             <!-- log in: general popup -->
             <div id="logIn" class="popup hidden" data-popup="logIn">
                 <div class="popupBox4">
+                    <script src="main.js"></script>
                     <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
+
+                    
 
                     <h1>Log-In</h1>
                     <h2>To log into your profile, please scan your library card on the scanner attached to the kiosk, or
@@ -448,14 +451,17 @@
                     <img class="userEmailImg" src="images/icons/loginUserNamePopup.svg">
                     <img class="userPswrdImg" src="images/icons/loginPasswordPopup.svg">
 
-                    <input type="text" class="emailBox" placeholder="Enter email...">
+                    <input type="text" id = "emailBox" class="emailBox" placeholder="Enter email...">
                     <input type="password" id="passwordBox" class="passwordBox" placeholder="Enter password...">
 
                     <button class="showPassword" id="showPassword"> <img class="showPasswordImg" id="showPasswordImg"
                             src="images/icons/passwordEyeClosed.svg"></button>
 
+                    <span id="errorMsg" class="loginError">Forgot your password, or want an account? Please find an associate for help.</span>
+
+
                     <div class="buttonLogIn">
-                        <button class="logInPopup popupClose loginGoodBtn">Log-In</button>
+                        <button class="logInPopup popupClose loginGoodBtn" id="logButton" disabled>Log-In</button>
                         <button class="logInPopup popupClose">Cancel</button>
                     </div>
                 </div>
@@ -522,9 +528,8 @@
                     <img class="exitPopup popupClose" src="images/icons/exitPopup.svg">
 
                     <div class="row2">
-                        <img class="profilePicture" src="images/icons/accountIconPopup.svg">
                         <p> <span class="profileName">Hello, Ann!</span><br><span class="libraryName">Welcome to the
-                                <span class="textGreen"> Louise<br> </spans> <span id="libraryNameBottom">Riley
+                                <span class="textGreen"> Louise<br><span id="libraryNameBottom">Riley
                                         Library.</span></p>
                     </div>
 

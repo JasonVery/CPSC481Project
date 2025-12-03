@@ -277,6 +277,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    /* JJ: This is me tryin gto get the password thing. It wants to work but i struggle once more with the element by ID thing. */
+
+    // const correctUsername = "ann@gmail.com";
+    // const correctPassword = "Password1";
+
+    // const errorMessage = document.querySelector("errorMsg");
+    // const annPassword = document.querySelector("passwordBox")
+    // const annUsername = document.querySelector("emailBox");
+
+    // if (loginGoodBtn) {
+    //     loginGoodBtn.forEach(btn => {
+    //         btn.addEventListener("click", function () {
+    //             const passwordEntered = annPassword.value.trim();
+    //             const loginInput = annUsername.value.trim();
+    //             if (passwordEntered == correctPassword && loginInput.toLowerCase() == correctUsername){
+    //                 isLoggedIn = true;
+    //                 loginLabel.innerHTML = "Ann";
+    //             } else {
+    //                 if (loginInput.length > 0 || passwordInput.length > 0) {
+    //                     errorMessage.textContent = "Username or Password not recognized. Please try again."
+    //                     errorMessage.style.display = "block";
+    //                 } else {
+    //                     errorMessage.style.display = "none";
+    //                 }
+    //             }
+
+    //             if (isTryingToHold === true) {
+    //                 openPopup("placeHoldPopup");
+    //             }
+
+
+    //         });
+
+    //     });
+    // }
+
+
     if (loginGoodBtn) {
         loginGoodBtn.forEach(btn => {
             btn.addEventListener("click", function () {
@@ -305,6 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoutAcc) {
         logoutAcc.addEventListener("click", function () {
             isLoggedIn = false;
+            logButton.disabled = true;
             openPopup("logOff");
         });
     }
@@ -482,6 +520,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Checking if log in is true
+    const correctUsername = "ann@gmail.com";
+    const correctPassword = "Password1";
+    const errorMessage = document.getElementById("errorMsg");
+
+    const annPassword = passwordInput
+    const annUsername = document.getElementById("emailBox");
+    const logButton = document.getElementById("logButton");
+
+    annPassword.addEventListener("input", function() {
+        const passwordEntered = annPassword.value.trim();
+        const loginInput = annUsername.value.trim();
+
+        if (passwordEntered == correctPassword && loginInput.toLowerCase() == correctUsername){
+            logButton.disabled = false;
+        } else {
+            logButton.disabled = true;
+            if (loginInput.length > 0 || passwordInput.length > 0) {
+                errorMessage.textContent = "Username and/or Password not recognized. Please try again."
+                errorMessage.style.color = "#a81414"
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.color = "#000"
+                errorMessage.textContent = "Forgot your password, or want an account? Please find an associate for help."
+            }
+        }
+
+    })
 
 
     // Universal handeling to close popups
