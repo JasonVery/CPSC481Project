@@ -22,7 +22,7 @@ const bookDetails = {
 
     pieces: {
         title: "A Thousand Pieces of You",
-        author: "Caludia Gray",
+        author: "Claudia Gray",
         img: "images/books/searchPieces.svg",
         genre: "Fiction, Fantasy, Romance, Young-Adult",
         availability: "1 Available At Louise Riley Library",
