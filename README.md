@@ -5,6 +5,7 @@ Since we did not use any external libraries or frameworks, the code can be ran l
 Link to our hosted application: jasonvery.github.io/CPSC481Project/ (Please adjust zoom level if needed by hitting ctrl + or ctrl -)
  
 Link to video:
+https://www.youtube.com/watch?v=-K_2qFi4t50
 
 
 
